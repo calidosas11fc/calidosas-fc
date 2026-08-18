@@ -3,7 +3,6 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Calidosas FC | Fútbol 11 Femenino</title>
@@ -46,23 +45,17 @@ body{
 ===================================================== */
 
 .navbar{
-
     position:fixed;
-
     top:0;
     left:0;
-
     width:100%;
-
     height:78px;
 
     display:flex;
-
     justify-content:space-between;
     align-items:center;
 
     padding:0 55px;
-
     z-index:1000;
 
     background:
@@ -73,85 +66,55 @@ body{
     );
 
     transition:.3s;
-
 }
 
 .navbar.scrolled{
-
-    background:
-    rgba(3,8,15,.96);
-
+    background:rgba(3,8,15,.96);
     backdrop-filter:blur(15px);
-
 }
 
 .brand{
-
     display:flex;
-
     align-items:center;
-
     gap:12px;
 
     font-weight:1000;
-
     font-size:18px;
-
     letter-spacing:1px;
-
 }
 
 .brand img{
-
     width:52px;
     height:52px;
-
     object-fit:contain;
-
 }
 
 .brand span{
-
     color:var(--orange);
-
 }
 
 .menu{
-
     display:flex;
-
     gap:32px;
-
     list-style:none;
-
 }
 
 .menu a{
-
     color:#fff;
-
     text-decoration:none;
 
     font-size:11px;
-
     font-weight:900;
-
     letter-spacing:2px;
-
     text-transform:uppercase;
 
     opacity:.85;
-
     transition:.25s;
-
 }
 
 .menu a:hover{
-
     color:var(--orange);
-
     opacity:1;
-
 }
 
 
@@ -160,42 +123,26 @@ body{
 ===================================================== */
 
 .hero{
-
     position:relative;
-
     min-height:100vh;
-
     height:100vh;
-
     overflow:hidden;
 
     display:flex;
-
     align-items:center;
-
 }
 
-
-/* FOTO DE FONDO */
-
 .hero-background{
-
     position:absolute;
-
     inset:0;
-
     z-index:0;
-
 }
 
 .hero-background img{
-
     position:absolute;
-
     inset:0;
 
     width:100%;
-
     height:100%;
 
     object-fit:cover;
@@ -207,30 +154,19 @@ body{
     transition:
     opacity 1.3s ease,
     transform 7s ease;
-
 }
 
 .hero-background img.active{
-
     opacity:1;
-
     transform:scale(1);
-
 }
 
-
-/* CAPAS */
-
 .hero-overlay{
-
     position:absolute;
-
     inset:0;
-
     z-index:1;
 
     background:
-
     linear-gradient(
         90deg,
         rgba(3,7,14,.97) 0%,
@@ -238,13 +174,10 @@ body{
         rgba(3,7,14,.30) 75%,
         rgba(3,7,14,.70) 100%
     );
-
 }
 
 .hero-bottom{
-
     position:absolute;
-
     left:0;
     right:0;
     bottom:0;
@@ -258,46 +191,32 @@ body{
         transparent,
         #05080f
     );
-
 }
 
-
-/* CONTENIDO */
-
 .hero-content{
-
     position:relative;
-
     z-index:5;
 
     width:100%;
-
     max-width:1250px;
 
     margin:auto;
 
     padding:90px 45px 40px;
-
 }
 
 .hero-small{
-
     color:var(--orange);
 
     font-size:12px;
-
     font-weight:900;
-
     letter-spacing:5px;
 
     margin-bottom:25px;
-
 }
 
 .hero-logo{
-
     width:120px;
-
     height:120px;
 
     object-fit:contain;
@@ -312,7 +231,6 @@ body{
 
     animation:
     logoIn 1s ease forwards;
-
 }
 
 @keyframes logoIn{
@@ -329,9 +247,7 @@ body{
 
 }
 
-
 .hero-title{
-
     font-size:
     clamp(65px,10vw,145px);
 
@@ -346,69 +262,46 @@ body{
     text-shadow:
     0 10px 40px
     rgba(0,0,0,.5);
-
 }
 
 .hero-title span{
-
     display:block;
-
     color:var(--orange);
-
 }
 
-
 .hero-description{
-
     max-width:550px;
 
     margin-top:35px;
 
     font-size:17px;
-
     line-height:1.6;
 
     color:#e2e7ed;
-
 }
 
-
 .hero-motto{
-
     margin-top:20px;
 
     font-size:13px;
-
     font-weight:900;
-
     letter-spacing:4px;
-
 }
 
 .hero-motto span{
-
     color:var(--orange);
-
 }
-
 
 .hero-buttons{
-
     display:flex;
-
     gap:12px;
-
     margin-top:32px;
-
 }
 
-
 .btn{
-
     display:inline-flex;
 
     align-items:center;
-
     justify-content:center;
 
     min-width:175px;
@@ -422,19 +315,15 @@ body{
     text-decoration:none;
 
     font-size:11px;
-
     font-weight:1000;
-
     letter-spacing:1.5px;
 
     text-transform:uppercase;
 
     transition:.3s;
-
 }
 
 .btn:hover{
-
     transform:translateY(-4px);
 
     background:var(--orange2);
@@ -442,73 +331,56 @@ body{
     box-shadow:
     0 15px 35px
     rgba(245,130,32,.3);
-
 }
 
 .btn-dark{
-
     background:
     rgba(0,0,0,.45);
 
     border:
     1px solid
     rgba(255,255,255,.45);
-
 }
 
 
 /* =====================================================
-   CONTROLES HERO
+   HERO COUNTER
 ===================================================== */
 
 .hero-counter{
-
     position:absolute;
 
     right:55px;
-
     bottom:70px;
 
     z-index:10;
 
     display:flex;
-
     align-items:center;
-
     gap:15px;
-
 }
 
 .hero-counter-number{
-
     font-size:14px;
-
     font-weight:900;
-
 }
 
 .hero-counter-line{
-
     width:90px;
-
     height:2px;
 
     background:
     rgba(255,255,255,.35);
-
 }
 
 .hero-counter-line span{
-
     display:block;
 
     height:100%;
-
     width:30%;
 
     background:
     var(--orange);
-
 }
 
 
@@ -517,11 +389,9 @@ body{
 ===================================================== */
 
 .scroll{
-
     position:absolute;
 
     left:55px;
-
     bottom:65px;
 
     z-index:10;
@@ -536,7 +406,6 @@ body{
 
     writing-mode:
     vertical-rl;
-
 }
 
 
@@ -545,34 +414,26 @@ body{
 ===================================================== */
 
 .section{
-
     max-width:1250px;
 
     margin:auto;
 
     padding:
     110px 40px;
-
 }
 
-
 .section-tag{
-
     color:var(--orange);
 
     font-size:10px;
-
     font-weight:900;
 
     letter-spacing:4px;
 
     margin-bottom:15px;
-
 }
 
-
 .section-title{
-
     font-size:
     clamp(45px,7vw,90px);
 
@@ -583,14 +444,10 @@ body{
     letter-spacing:-4px;
 
     text-transform:uppercase;
-
 }
 
-
 .section-title span{
-
     color:var(--orange);
-
 }
 
 
@@ -599,7 +456,6 @@ body{
 ===================================================== */
 
 .stats{
-
     display:grid;
 
     grid-template-columns:
@@ -612,11 +468,9 @@ body{
     border-bottom:
     1px solid
     rgba(255,255,255,.1);
-
 }
 
 .stat{
-
     padding:45px 25px;
 
     text-align:center;
@@ -624,28 +478,22 @@ body{
     border-right:
     1px solid
     rgba(255,255,255,.1);
-
 }
 
 .stat:last-child{
-
     border-right:none;
-
 }
 
 .stat-number{
-
     font-size:
     clamp(42px,6vw,75px);
 
     font-weight:1000;
 
     color:var(--orange);
-
 }
 
 .stat-label{
-
     margin-top:7px;
 
     font-size:10px;
@@ -655,7 +503,6 @@ body{
     letter-spacing:2px;
 
     color:#aab5c2;
-
 }
 
 
@@ -664,20 +511,15 @@ body{
 ===================================================== */
 
 .roster-header{
-
     display:flex;
 
     justify-content:space-between;
-
     align-items:end;
 
     margin-bottom:45px;
-
 }
 
-
 .roster-subtitle{
-
     max-width:430px;
 
     color:#9faebe;
@@ -685,9 +527,10 @@ body{
     line-height:1.6;
 
     font-size:14px;
-
 }
 
+
+/* TARJETAS */
 
 .roster{
 
@@ -697,29 +540,57 @@ body{
     repeat(4,1fr);
 
     gap:14px;
-
 }
-
 
 .player{
 
     position:relative;
 
-    height:420px;
+    min-height:210px;
 
     overflow:hidden;
 
     background:
-    #08182a;
+    linear-gradient(
+        145deg,
+        #0d2947,
+        #071321
+    );
 
     border:
     1px solid
     rgba(255,255,255,.08);
 
-    transition:.4s;
+    padding:30px 25px;
 
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-end;
+
+    transition:.35s;
 }
 
+.player::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:130px;
+    height:130px;
+
+    top:-50px;
+    right:-50px;
+
+    border-radius:50%;
+
+    background:
+    rgba(245,130,32,.12);
+
+    transition:.4s;
+}
 
 .player:hover{
 
@@ -729,104 +600,69 @@ body{
     border-color:
     var(--orange);
 
+    box-shadow:
+    0 20px 40px
+    rgba(0,0,0,.35);
 }
 
+.player:hover::before{
 
-.player img{
-
-    position:absolute;
-
-    inset:0;
-
-    width:100%;
-
-    height:100%;
-
-    object-fit:cover;
-
-    transition:.5s;
-
-}
-
-
-.player:hover img{
-
-    transform:scale(1.06);
-
-}
-
-
-.player::after{
-
-    content:"";
-
-    position:absolute;
-
-    inset:0;
+    transform:
+    scale(1.6);
 
     background:
-
-    linear-gradient(
-        transparent 35%,
-        rgba(0,0,0,.25) 50%,
-        rgba(0,0,0,.96) 100%
-    );
-
+    rgba(245,130,32,.20);
 }
-
-
-.player-info{
-
-    position:absolute;
-
-    left:20px;
-
-    right:20px;
-
-    bottom:20px;
-
-    z-index:5;
-
-}
-
 
 .player-number{
 
-    color:var(--orange);
+    position:absolute;
 
-    font-size:12px;
+    top:18px;
+    right:22px;
+
+    font-size:34px;
 
     font-weight:1000;
 
-    letter-spacing:2px;
+    color:
+    rgba(255,255,255,.12);
 
+    z-index:2;
 }
-
 
 .player-name{
 
-    margin-top:4px;
+    position:relative;
 
-    font-size:24px;
+    z-index:3;
+
+    font-size:19px;
+
+    line-height:1.05;
 
     font-weight:1000;
 
     text-transform:uppercase;
 
+    padding-right:25px;
 }
 
+.player-role{
 
-.player-position{
+    position:relative;
 
-    margin-top:5px;
+    z-index:3;
 
-    color:#b4bfca;
+    margin-top:12px;
 
-    font-size:10px;
+    font-size:9px;
 
     font-weight:900;
 
     letter-spacing:2px;
+
+    color:var(--orange);
 
 }
 
@@ -847,9 +683,7 @@ body{
     margin-top:55px;
 
     align-items:center;
-
 }
-
 
 .club-text{
 
@@ -858,16 +692,13 @@ body{
     font-size:18px;
 
     line-height:1.8;
-
 }
-
 
 .club-highlight{
 
     padding:45px;
 
     background:
-
     linear-gradient(
         135deg,
         #0d2947,
@@ -877,9 +708,7 @@ body{
     border-left:
     5px solid
     var(--orange);
-
 }
-
 
 .club-highlight h3{
 
@@ -890,14 +719,10 @@ body{
     font-weight:1000;
 
     margin-bottom:20px;
-
 }
 
-
 .club-highlight span{
-
     color:var(--orange);
-
 }
 
 
@@ -915,9 +740,7 @@ body{
     gap:12px;
 
     margin-top:55px;
-
 }
-
 
 .feature{
 
@@ -925,17 +748,14 @@ body{
 
     min-height:230px;
 
-    background:
-    #081524;
+    background:#081524;
 
     border:
     1px solid
     rgba(255,255,255,.07);
 
     transition:.3s;
-
 }
-
 
 .feature:hover{
 
@@ -944,9 +764,7 @@ body{
 
     transform:
     translateY(-5px);
-
 }
-
 
 .feature-number{
 
@@ -958,18 +776,14 @@ body{
     font-weight:1000;
 
     margin-bottom:35px;
-
 }
-
 
 .feature h3{
 
     font-size:21px;
 
     margin-bottom:15px;
-
 }
-
 
 .feature p{
 
@@ -978,7 +792,6 @@ body{
     font-size:13px;
 
     line-height:1.7;
-
 }
 
 
@@ -996,9 +809,7 @@ body{
     gap:7px;
 
     margin-top:50px;
-
 }
-
 
 .photo-grid img{
 
@@ -1009,9 +820,7 @@ body{
     object-fit:cover;
 
     transition:.4s;
-
 }
-
 
 .photo-grid img:hover{
 
@@ -1020,7 +829,6 @@ body{
 
     filter:
     brightness(1.15);
-
 }
 
 
@@ -1040,15 +848,12 @@ body{
     overflow:hidden;
 
     background:
-
     linear-gradient(
         135deg,
         #b9510c,
         #f58220
     );
-
 }
-
 
 .cta::before{
 
@@ -1058,7 +863,6 @@ body{
     position:absolute;
 
     left:50%;
-
     top:50%;
 
     transform:
@@ -1073,18 +877,14 @@ body{
     rgba(255,255,255,.06);
 
     white-space:nowrap;
-
 }
-
 
 .cta-content{
 
     position:relative;
 
     z-index:2;
-
 }
-
 
 .cta h2{
 
@@ -1096,9 +896,7 @@ body{
     font-weight:1000;
 
     letter-spacing:-5px;
-
 }
-
 
 .cta p{
 
@@ -1106,14 +904,11 @@ body{
     25px auto 30px;
 
     font-size:18px;
-
 }
-
 
 .cta .btn{
 
     background:#05080f;
-
 }
 
 
@@ -1130,16 +925,13 @@ footer{
     padding:55px 20px;
 
     color:#7f8b99;
-
 }
-
 
 .footer-logo{
 
     width:70px;
 
     margin-bottom:15px;
-
 }
 
 
@@ -1150,75 +942,54 @@ footer{
 @media(max-width:950px){
 
     .navbar{
-
         padding:
         0 25px;
-
     }
 
     .menu{
-
         display:none;
-
     }
 
     .hero-content{
-
         padding:
         100px 30px 50px;
-
     }
 
     .hero-title{
-
         font-size:
         clamp(60px,15vw,100px);
-
     }
 
     .stats{
-
         grid-template-columns:
         repeat(2,1fr);
-
     }
 
     .stat{
-
         border-bottom:
         1px solid
         rgba(255,255,255,.1);
-
     }
 
     .roster{
-
         grid-template-columns:
         repeat(2,1fr);
-
     }
 
     .features{
-
         grid-template-columns:
         repeat(2,1fr);
-
     }
 
     .club-grid{
-
         grid-template-columns:
         1fr;
-
     }
 
     .photo-grid{
-
         grid-template-columns:
         repeat(2,1fr);
-
     }
-
 }
 
 
@@ -1230,20 +1001,17 @@ footer{
 
         padding:
         0 15px;
-
     }
 
     .brand{
 
         font-size:15px;
-
     }
 
     .brand img{
 
         width:43px;
         height:43px;
-
     }
 
     .hero{
@@ -1251,49 +1019,40 @@ footer{
         min-height:100svh;
 
         height:auto;
-
     }
 
     .hero-overlay{
 
         background:
-
         linear-gradient(
             90deg,
             rgba(3,7,14,.94),
             rgba(3,7,14,.62)
         );
-
     }
 
     .hero-content{
 
         padding:
         115px 22px 90px;
-
     }
 
     .hero-logo{
 
         width:85px;
         height:85px;
-
     }
 
     .hero-title{
 
-        font-size:
-        64px;
+        font-size:64px;
 
-        letter-spacing:
-        -4px;
-
+        letter-spacing:-4px;
     }
 
     .hero-description{
 
         font-size:15px;
-
     }
 
     .hero-buttons{
@@ -1301,14 +1060,11 @@ footer{
         flex-direction:column;
 
         align-items:flex-start;
-
     }
 
     .btn{
 
-        width:
-        100%;
-
+        width:100%;
     }
 
     .hero-counter{
@@ -1316,93 +1072,86 @@ footer{
         right:20px;
 
         bottom:30px;
-
     }
 
     .scroll{
-
         display:none;
-
     }
 
     .section{
 
         padding:
         75px 20px;
-
     }
 
     .section-title{
 
-        font-size:
-        52px;
-
+        font-size:52px;
     }
 
     .stats{
 
         grid-template-columns:
         repeat(2,1fr);
-
     }
 
     .stat{
 
         padding:
         30px 10px;
-
     }
 
     .roster{
 
         grid-template-columns:
-        repeat(2,1fr);
+        1fr 1fr;
 
+        gap:9px;
     }
 
     .player{
 
-        height:300px;
+        min-height:180px;
 
+        padding:
+        22px 16px;
     }
 
     .player-name{
 
-        font-size:16px;
+        font-size:15px;
+    }
 
+    .player-number{
+
+        font-size:25px;
     }
 
     .features{
 
         grid-template-columns:1fr;
-
     }
 
     .photo-grid{
 
         grid-template-columns:
         repeat(2,1fr);
-
     }
 
     .photo-grid img{
 
         height:180px;
-
     }
 
     .roster-header{
 
         display:block;
-
     }
 
     .roster-subtitle{
 
         margin-top:20px;
-
     }
-
 }
 
 </style>
@@ -1419,7 +1168,6 @@ footer{
 
 <nav class="navbar" id="navbar">
 
-
 <div class="brand">
 
 <img
@@ -1435,27 +1183,36 @@ CALIDOSAS
 <ul class="menu">
 
 <li>
-<a href="#plantilla">Plantilla</a>
+<a href="#plantilla">
+Plantilla
+</a>
 </li>
 
 <li>
-<a href="#club">Club</a>
+<a href="#club">
+Club
+</a>
 </li>
 
 <li>
-<a href="#futbol">Fútbol</a>
+<a href="#futbol">
+Fútbol
+</a>
 </li>
 
 <li>
-<a href="#galeria">Galería</a>
+<a href="#galeria">
+Galería
+</a>
 </li>
 
 <li>
-<a href="#contacto">Contacto</a>
+<a href="#contacto">
+Contacto
+</a>
 </li>
 
 </ul>
-
 
 </nav>
 
@@ -1654,7 +1411,6 @@ id="counter">
 
 <section class="section">
 
-
 <div class="stats">
 
 
@@ -1712,7 +1468,6 @@ PASIÓN
 
 </div>
 
-
 </section>
 
 
@@ -1747,11 +1502,9 @@ NUESTRA
 
 <p class="roster-subtitle">
 
-Las mujeres que representan
-los colores de Calidosas FC.
-
-Próximamente podrás conocer
-a cada integrante del equipo.
+Las 19 jugadoras que actualmente
+forman parte de nuestro primer equipo
+de fútbol 11 femenino.
 
 </p>
 
@@ -1759,111 +1512,384 @@ a cada integrante del equipo.
 </div>
 
 
+
 <div class="roster">
 
 
+<!-- 01 -->
+
 <div class="player">
-
-<img
-src="images/IMG_4025.jpeg"
-alt="Calidosas FC">
-
-<div class="player-info">
 
 <div class="player-number">
 01
 </div>
 
 <div class="player-name">
-JUGADORA
+Laura Susana<br>
+Becerra Hernandez
 </div>
 
-<div class="player-position">
-PORTERA
+<div class="player-role">
+PRIMER EQUIPO
 </div>
 
 </div>
 
-</div>
 
+<!-- 02 -->
 
 <div class="player">
-
-<img
-src="images/IMG_4035.jpeg"
-alt="Calidosas FC">
-
-<div class="player-info">
 
 <div class="player-number">
 02
 </div>
 
 <div class="player-name">
-JUGADORA
+Kathe Beltran
 </div>
 
-<div class="player-position">
-DEFENSA
+<div class="player-role">
+PRIMER EQUIPO
 </div>
 
 </div>
 
-</div>
 
+<!-- 03 -->
 
 <div class="player">
-
-<img
-src="images/IMG_4052.jpeg"
-alt="Calidosas FC">
-
-<div class="player-info">
 
 <div class="player-number">
 03
 </div>
 
 <div class="player-name">
-JUGADORA
+Paola Hernandez
 </div>
 
-<div class="player-position">
-MEDIOCAMPISTA
+<div class="player-role">
+PRIMER EQUIPO
 </div>
 
 </div>
 
-</div>
 
+<!-- 04 -->
 
 <div class="player">
-
-<img
-src="images/IMG_4068.jpeg"
-alt="Calidosas FC">
-
-<div class="player-info">
 
 <div class="player-number">
 04
 </div>
 
 <div class="player-name">
-JUGADORA
+Sara Velandia<br>
+Hernandez
 </div>
 
-<div class="player-position">
-DELANTERA
+<div class="player-role">
+PRIMER EQUIPO
 </div>
-
-</div>
-
-</div>
-
 
 </div>
 
+
+<!-- 05 -->
+
+<div class="player">
+
+<div class="player-number">
+05
+</div>
+
+<div class="player-name">
+Liliana Patricia<br>
+Ochoa Pinzon
+</div>
+
+<div class="player-role">
+PRIMER EQUIPO
+</div>
+
+</div>
+
+
+<!-- 06 -->
+
+<div class="player">
+
+<div class="player-number">
+06
+</div>
+
+<div class="player-name">
+Yohanna Velandia
+</div>
+
+<div class="player-role">
+PRIMER EQUIPO
+</div>
+
+</div>
+
+
+<!-- 07 -->
+
+<div class="player">
+
+<div class="player-number">
+07
+</div>
+
+<div class="player-name">
+Janeth Vallejo
+</div>
+
+<div class="player-role">
+PRIMER EQUIPO
+</div>
+
+</div>
+
+
+<!-- 08 -->
+
+<div class="player">
+
+<div class="player-number">
+08
+</div>
+
+<div class="player-name">
+Danna Sofía<br>
+Salcedo Pinzón
+</div>
+
+<div class="player-role">
+PRIMER EQUIPO
+</div>
+
+</div>
+
+
+<!-- 09 -->
+
+<div class="player">
+
+<div class="player-number">
+09
+</div>
+
+<div class="player-name">
+Keyry Ramirez
+</div>
+
+<div class="player-role">
+PRIMER EQUIPO
+</div>
+
+</div>
+
+
+<!-- 10 -->
+
+<div class="player">
+
+<div class="player-number">
+10
+</div>
+
+<div class="player-name">
+Fanny Velandia<br>
+Polindara
+</div>
+
+<div class="player-role">
+PRIMER EQUIPO
+</div>
+
+</div>
+
+
+<!-- 11 -->
+
+<div class="player">
+
+<div class="player-number">
+11
+</div>
+
+<div class="player-name">
+Ingrith Yesenya<br>
+Cabra Romero
+</div>
+
+<div class="player-role">
+PRIMER EQUIPO
+</div>
+
+</div>
+
+
+<!-- 12 -->
+
+<div class="player">
+
+<div class="player-number">
+12
+</div>
+
+<div class="player-name">
+Laura Sofia<br>
+Cabra Castillo
+</div>
+
+<div class="player-role">
+PRIMER EQUIPO
+</div>
+
+</div>
+
+
+<!-- 13 -->
+
+<div class="player">
+
+<div class="player-number">
+13
+</div>
+
+<div class="player-name">
+Jessica Marin<br>
+Rodriguez
+</div>
+
+<div class="player-role">
+PRIMER EQUIPO
+</div>
+
+</div>
+
+
+<!-- 14 -->
+
+<div class="player">
+
+<div class="player-number">
+14
+</div>
+
+<div class="player-name">
+Sara Valentina<br>
+Gama Moya
+</div>
+
+<div class="player-role">
+PRIMER EQUIPO
+</div>
+
+</div>
+
+
+<!-- 15 -->
+
+<div class="player">
+
+<div class="player-number">
+15
+</div>
+
+<div class="player-name">
+Jimena Reyes<br>
+Hurtado
+</div>
+
+<div class="player-role">
+PRIMER EQUIPO
+</div>
+
+</div>
+
+
+<!-- 16 -->
+
+<div class="player">
+
+<div class="player-number">
+16
+</div>
+
+<div class="player-name">
+Valentina Mejia
+</div>
+
+<div class="player-role">
+PRIMER EQUIPO
+</div>
+
+</div>
+
+
+<!-- 17 -->
+
+<div class="player">
+
+<div class="player-number">
+17
+</div>
+
+<div class="player-name">
+Magda Lorena<br>
+Sanabria Moreno
+</div>
+
+<div class="player-role">
+PRIMER EQUIPO
+</div>
+
+</div>
+
+
+<!-- 18 -->
+
+<div class="player">
+
+<div class="player-number">
+18
+</div>
+
+<div class="player-name">
+Linda Avila
+</div>
+
+<div class="player-role">
+PRIMER EQUIPO
+</div>
+
+</div>
+
+
+<!-- 19 -->
+
+<div class="player">
+
+<div class="player-number">
+19
+</div>
+
+<div class="player-name">
+Diana Marcela<br>
+Triana
+</div>
+
+<div class="player-role">
+PRIMER EQUIPO
+</div>
+
+</div>
+
+
+</div>
 
 </section>
 
@@ -1906,9 +1932,7 @@ alrededor de una idea sencilla:
 
 </p>
 
-
 <br>
-
 
 <p>
 
@@ -1932,7 +1956,6 @@ NOS <span>UNE.</span>
 
 </h3>
 
-
 <p>
 
 La disciplina nos hace crecer.
@@ -1943,12 +1966,10 @@ La pasión nos mantiene jugando.
 
 </p>
 
-
 </div>
 
 
 </div>
-
 
 </section>
 
@@ -2064,7 +2085,6 @@ del arco.
 
 </div>
 
-
 </section>
 
 
@@ -2126,9 +2146,7 @@ alt="Calidosas FC">
 src="images/IMG_4072.jpeg"
 alt="Calidosas FC">
 
-
 </div>
-
 
 </section>
 
@@ -2175,7 +2193,6 @@ QUIERO INFORMACIÓN
 
 </div>
 
-
 </section>
 
 
@@ -2194,16 +2211,12 @@ alt="Calidosas FC">
 
 
 <p>
-
 CALIDOSAS FC
-
 </p>
 
 
 <p>
-
 Fútbol 11 femenino · 2026
-
 </p>
 
 
@@ -2218,9 +2231,7 @@ Fútbol 11 femenino · 2026
 <script>
 
 
-/* =====================================================
-   HERO CARRUSEL
-===================================================== */
+/* CARRUSEL */
 
 const heroImages =
 document.querySelectorAll(
@@ -2232,8 +2243,7 @@ document.getElementById(
     "counter"
 );
 
-let current =
-0;
+let current = 0;
 
 
 function nextImage(){
@@ -2259,7 +2269,6 @@ function nextImage(){
         "active"
     );
 
-
     counter.textContent =
     String(current+1)
     .padStart(2,"0")
@@ -2279,9 +2288,7 @@ setInterval(
 );
 
 
-/* =====================================================
-   NAVBAR
-===================================================== */
+/* NAVBAR */
 
 window.addEventListener(
     "scroll",
@@ -2311,10 +2318,8 @@ window.addEventListener(
     }
 );
 
-
 </script>
 
 
 </body>
-
 </html>
