@@ -10,6 +10,760 @@
 <style>
 
    /* =====================================================
+   EL CLUB · CALIDOSAS FEMENINO
+===================================================== */
+
+.club-section{
+    position:relative;
+    overflow:hidden;
+}
+
+
+/* -----------------------------------------------------
+   TÍTULO
+----------------------------------------------------- */
+
+.club-title{
+    max-width:900px;
+}
+
+.club-title span{
+    display:block;
+    color:var(--orange);
+}
+
+
+/* -----------------------------------------------------
+   HERO
+----------------------------------------------------- */
+
+.club-hero{
+    position:relative;
+
+    display:grid;
+    grid-template-columns:1fr 260px;
+
+    gap:40px;
+
+    margin-top:55px;
+    padding:55px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0d2a48,
+            #071522
+        );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    overflow:hidden;
+}
+
+
+/* detalle naranja */
+
+.club-hero::before{
+    content:"";
+
+    position:absolute;
+
+    width:280px;
+    height:280px;
+
+    right:-120px;
+    top:-120px;
+
+    border:45px solid rgba(255,120,0,.08);
+
+    border-radius:50%;
+}
+
+
+/* línea decorativa */
+
+.club-hero::after{
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    bottom:0;
+
+    width:35%;
+    height:4px;
+
+    background:var(--orange);
+}
+
+
+.club-hero-content{
+    position:relative;
+    z-index:2;
+}
+
+
+.club-kicker{
+    color:var(--orange);
+
+    font-size:11px;
+    font-weight:1000;
+
+    letter-spacing:3px;
+
+    margin-bottom:18px;
+}
+
+
+.club-hero-content h3{
+    margin:0 0 25px;
+
+    max-width:650px;
+
+    font-size:clamp(32px,5vw,62px);
+
+    line-height:.95;
+
+    font-weight:1000;
+}
+
+
+.club-hero-content h3 strong{
+    display:block;
+
+    color:var(--orange);
+}
+
+
+.club-hero-content p{
+    max-width:720px;
+
+    color:#b9c4cf;
+
+    font-size:15px;
+
+    line-height:1.8;
+
+    margin:12px 0;
+}
+
+
+.club-hero-content p strong{
+    color:#fff;
+}
+
+
+/* BADGE */
+
+.club-hero-badge{
+
+    position:relative;
+    z-index:2;
+
+    display:flex;
+    flex-direction:column;
+
+    align-items:center;
+    justify-content:center;
+
+    min-height:240px;
+
+    border:1px solid rgba(255,255,255,.12);
+
+    background:
+        rgba(255,255,255,.025);
+
+    text-align:center;
+}
+
+
+.club-hero-badge span{
+    color:#8d9baa;
+
+    font-size:10px;
+
+    font-weight:900;
+
+    letter-spacing:4px;
+}
+
+
+.club-hero-badge strong{
+    margin:10px 0;
+
+    color:#fff;
+
+    font-size:32px;
+
+    font-weight:1000;
+
+    line-height:1;
+}
+
+
+.club-hero-badge small{
+    color:var(--orange);
+
+    font-size:12px;
+
+    font-weight:1000;
+
+    letter-spacing:4px;
+}
+
+
+/* -----------------------------------------------------
+   ESTADÍSTICAS
+----------------------------------------------------- */
+
+.club-stats{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    margin-top:15px;
+
+    border:1px solid rgba(255,255,255,.08);
+}
+
+
+.club-stat{
+
+    padding:30px 25px;
+
+    background:#081726;
+
+    border-right:1px solid rgba(255,255,255,.07);
+
+    transition:.25s ease;
+}
+
+
+.club-stat:last-child{
+    border-right:none;
+}
+
+
+.club-stat:hover{
+    background:#0d243a;
+}
+
+
+.club-stat strong{
+
+    display:block;
+
+    color:#fff;
+
+    font-size:36px;
+
+    line-height:1;
+
+    font-weight:1000;
+}
+
+
+.club-stat span{
+
+    display:block;
+
+    margin-top:8px;
+
+    color:var(--orange);
+
+    font-size:10px;
+
+    font-weight:1000;
+
+    letter-spacing:2px;
+}
+
+
+.club-stat small{
+
+    display:block;
+
+    margin-top:8px;
+
+    color:#7e8d9b;
+
+    font-size:10px;
+}
+
+
+/* -----------------------------------------------------
+   BLOQUE FEMENINO
+----------------------------------------------------- */
+
+.female-block{
+
+    margin-top:80px;
+
+    padding:50px;
+
+    background:
+        linear-gradient(
+            120deg,
+            #071522,
+            #0b2035
+        );
+
+    border-left:4px solid var(--orange);
+}
+
+
+.female-block-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    margin-bottom:50px;
+}
+
+
+.mini-label{
+
+    color:var(--orange);
+
+    font-size:10px;
+
+    font-weight:1000;
+
+    letter-spacing:3px;
+}
+
+
+.female-block-header h3{
+
+    margin-top:12px;
+
+    font-size:42px;
+
+    font-weight:1000;
+
+    line-height:1;
+}
+
+
+.female-block-header h3 span{
+
+    color:var(--orange);
+}
+
+
+.female-number{
+
+    font-size:80px;
+
+    font-weight:1000;
+
+    line-height:1;
+
+    color:rgba(255,255,255,.04);
+}
+
+
+.female-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        1.1fr
+        .9fr;
+
+    gap:70px;
+}
+
+
+.female-text p{
+
+    color:#9eacba;
+
+    font-size:14px;
+
+    line-height:1.8;
+
+    margin:0 0 18px;
+}
+
+
+.female-text .lead{
+
+    color:#fff;
+
+    font-size:19px;
+
+    line-height:1.6;
+}
+
+
+.female-text strong{
+
+    color:var(--orange);
+}
+
+
+/* PILARES */
+
+.female-pillars{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+}
+
+
+.female-pillar{
+
+    display:grid;
+
+    grid-template-columns:55px 1fr;
+
+    gap:20px;
+
+    padding:22px;
+
+    background:rgba(255,255,255,.025);
+
+    border:1px solid rgba(255,255,255,.06);
+
+    transition:.25s ease;
+}
+
+
+.female-pillar:hover{
+
+    transform:translateX(5px);
+
+    border-color:rgba(255,120,0,.35);
+}
+
+
+.pillar-number{
+
+    color:var(--orange);
+
+    font-size:12px;
+
+    font-weight:1000;
+}
+
+
+.female-pillar h4{
+
+    margin:0 0 7px;
+
+    color:#fff;
+
+    font-size:13px;
+
+    font-weight:1000;
+
+    letter-spacing:1px;
+}
+
+
+.female-pillar p{
+
+    margin:0;
+
+    color:#7f8c98;
+
+    font-size:11px;
+
+    line-height:1.6;
+}
+
+
+/* -----------------------------------------------------
+   RESPALDO DEL CLUB
+----------------------------------------------------- */
+
+.club-support{
+
+    display:grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap:50px;
+
+    margin-top:20px;
+
+    padding:50px;
+
+    background:#0a1c2e;
+
+    border:1px solid rgba(255,255,255,.07);
+}
+
+
+.support-content h3{
+
+    margin:15px 0;
+
+    max-width:450px;
+
+    font-size:38px;
+
+    line-height:1;
+
+    font-weight:1000;
+}
+
+
+.support-content h3 span{
+
+    display:block;
+
+    color:var(--orange);
+}
+
+
+.support-content p{
+
+    max-width:600px;
+
+    color:#8e9ba8;
+
+    font-size:13px;
+
+    line-height:1.8;
+}
+
+
+.support-stats{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    align-items:center;
+
+    gap:15px;
+}
+
+
+.support-stats div{
+
+    padding:20px;
+
+    border-left:2px solid var(--orange);
+}
+
+
+.support-stats strong{
+
+    display:block;
+
+    color:#fff;
+
+    font-size:30px;
+
+    font-weight:1000;
+}
+
+
+.support-stats span{
+
+    display:block;
+
+    margin-top:8px;
+
+    color:#7f8c98;
+
+    font-size:8px;
+
+    font-weight:1000;
+
+    letter-spacing:1px;
+}
+
+
+/* -----------------------------------------------------
+   FRASE FINAL
+----------------------------------------------------- */
+
+.club-final{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:25px;
+
+    margin-top:70px;
+
+    text-align:center;
+}
+
+
+.club-final-line{
+
+    width:70px;
+
+    height:1px;
+
+    background:rgba(255,255,255,.15);
+}
+
+
+.club-final p{
+
+    margin:0;
+
+    color:#7f8b98;
+
+    font-size:9px;
+
+    font-weight:1000;
+
+    letter-spacing:3px;
+}
+
+
+.club-final h3{
+
+    margin:0;
+
+    color:#fff;
+
+    font-size:18px;
+
+    font-weight:1000;
+}
+
+
+.club-final h3 span{
+
+    color:var(--orange);
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:850px){
+
+    .club-hero{
+
+        grid-template-columns:1fr;
+
+        padding:40px 30px;
+    }
+
+
+    .club-hero-badge{
+
+        min-height:160px;
+    }
+
+
+    .club-stats{
+
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+
+    .club-stat:nth-child(2){
+
+        border-right:none;
+    }
+
+
+    .female-grid{
+
+        grid-template-columns:1fr;
+
+        gap:40px;
+    }
+
+
+    .club-support{
+
+        grid-template-columns:1fr;
+
+        padding:40px 30px;
+    }
+
+}
+
+
+@media(max-width:600px){
+
+    .club-hero{
+
+        padding:35px 22px;
+    }
+
+
+    .club-stats{
+
+        grid-template-columns:1fr;
+    }
+
+
+    .club-stat{
+
+        border-right:none;
+
+        border-bottom:1px solid rgba(255,255,255,.07);
+    }
+
+
+    .female-block{
+
+        padding:35px 22px;
+    }
+
+
+    .female-block-header h3{
+
+        font-size:30px;
+    }
+
+
+    .female-number{
+
+        font-size:50px;
+    }
+
+
+    .support-stats{
+
+        grid-template-columns:1fr;
+    }
+
+
+    .club-final{
+
+        flex-direction:column;
+
+        gap:12px;
+    }
+
+
+    .club-final-line{
+
+        width:40px;
+    }
+
+}
+
+   /* =====================================================
    PARTIDOS
 ===================================================== */
 
@@ -2230,83 +2984,291 @@ PRIMER EQUIPO
 </section>
 
 <!-- =====================================================
-     CLUB
+     EL CLUB / CALIDOSAS FC FEMENINO
 ===================================================== -->
 
-<section
-class="section"
-id="club">
+<section class="section club-section" id="club">
+
+    <!-- ENCABEZADO -->
+
+    <div class="section-tag">
+        CALIDOSAS FC · CATEGORÍA FEMENINA
+    </div>
+
+    <h2 class="section-title club-title">
+        EL CLUB
+        <span>QUE JUEGA CONTIGO</span>
+    </h2>
 
 
-<div class="section-tag">
-02 / IDENTIDAD
-</div>
+    <!-- PRESENTACIÓN PRINCIPAL -->
+
+    <div class="club-hero">
+
+        <div class="club-hero-content">
+
+            <div class="club-kicker">
+                CALIDOSAS FC FEMENINO
+            </div>
+
+            <h3>
+                MÁS QUE UN EQUIPO.
+                <strong>UNA COMUNIDAD.</strong>
+            </h3>
+
+            <p>
+                Calidosas FC abre sus puertas a mujeres que quieren
+                iniciar, continuar o potenciar su camino en el fútbol.
+            </p>
+
+            <p>
+                Nuestra categoría femenina está diseñada para mujeres
+                entre <strong>20 y 60 años</strong>, dentro de una estructura
+                deportiva que combina metodología profesional,
+                competencia y acompañamiento humano.
+            </p>
+
+        </div>
 
 
-<h2 class="section-title">
+        <div class="club-hero-badge">
 
-MÁS QUE
-<span>FÚTBOL</span>
+            <span>
+                FÚTBOL
+            </span>
 
-</h2>
+            <strong>
+                FEMENINO
+            </strong>
 
+            <small>
+                2026
+            </small>
 
-<div class="club-grid">
+        </div>
 
-
-<div class="club-text">
-
-<p>
-
-<strong>Calidosas FC</strong> es un club
-de fútbol 11 femenino construido
-alrededor de una idea sencilla:
-
-<strong>seguir viviendo el fútbol.</strong>
-
-</p>
-
-<br>
-
-<p>
-
-Entrenamos, competimos, aprendemos
-y compartimos dentro de un ambiente
-donde cada jugadora tiene un lugar.
-
-</p>
-
-</div>
+    </div>
 
 
-<div class="club-highlight">
+    <!-- NÚMEROS -->
 
-<h3>
+    <div class="club-stats">
 
-EL FÚTBOL
-<br>
+        <div class="club-stat">
+            <strong>20–60</strong>
+            <span>AÑOS</span>
+            <small>Categoría femenina</small>
+        </div>
 
-NOS <span>UNE.</span>
+        <div class="club-stat">
+            <strong>11</strong>
+            <span>FÚTBOL</span>
+            <small>Modalidad competitiva</small>
+        </div>
 
-</h3>
+        <div class="club-stat">
+            <strong>2H</strong>
+            <span>SESIÓN</span>
+            <small>Entrenamiento integral</small>
+        </div>
 
-<p>
+        <div class="club-stat">
+            <strong>200+</strong>
+            <span>JUGADORES</span>
+            <small>Respaldo del club</small>
+        </div>
 
-La disciplina nos hace crecer.
-
-El equipo nos hace fuertes.
-
-La pasión nos mantiene jugando.
-
-</p>
-
-</div>
+    </div>
 
 
-</div>
+    <!-- IDENTIDAD FEMENINA -->
+
+    <div class="female-block">
+
+        <div class="female-block-header">
+
+            <div>
+                <span class="mini-label">
+                    NUESTRA APUESTA
+                </span>
+
+                <h3>
+                    CALIDOSAS
+                    <span>FEMENINO</span>
+                </h3>
+            </div>
+
+            <div class="female-number">
+                01
+            </div>
+
+        </div>
+
+
+        <div class="female-grid">
+
+            <div class="female-text">
+
+                <p class="lead">
+                    Un espacio creado para que cada jugadora
+                    pueda <strong>crecer, competir y disfrutar
+                    del fútbol</strong> en todas sus etapas.
+                </p>
+
+                <p>
+                    Como parte del proceso de expansión de
+                    Calidosos FC, nace nuestra categoría femenina:
+                    una apuesta estratégica por el desarrollo del
+                    fútbol femenino en Colombia.
+                </p>
+
+                <p>
+                    Nuestro objetivo es brindar las herramientas
+                    necesarias para potenciar las capacidades de
+                    cada jugadora, fortalecer su confianza y vivir
+                    el fútbol con disciplina, pasión y alto nivel.
+                </p>
+
+            </div>
+
+
+            <!-- PILARES -->
+
+            <div class="female-pillars">
+
+                <div class="female-pillar">
+
+                    <div class="pillar-number">
+                        01
+                    </div>
+
+                    <div>
+                        <h4>
+                            DESARROLLO
+                        </h4>
+
+                        <p>
+                            Potenciamos las capacidades
+                            individuales de cada jugadora.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="female-pillar">
+
+                    <div class="pillar-number">
+                        02
+                    </div>
+
+                    <div>
+                        <h4>
+                            COMPETENCIA
+                        </h4>
+
+                        <p>
+                            Entrenamos para llevar nuestro
+                            fútbol a situaciones reales.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="female-pillar">
+
+                    <div class="pillar-number">
+                        03
+                    </div>
+
+                    <div>
+                        <h4>
+                            COMUNIDAD
+                        </h4>
+
+                        <p>
+                            Construimos un equipo dentro y
+                            fuera del campo.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- RESPALDO DEL CLUB -->
+
+    <div class="club-support">
+
+        <div class="support-content">
+
+            <span class="mini-label">
+                EL RESPALDO
+            </span>
+
+            <h3>
+                PARTE DE ALGO
+                <span>MÁS GRANDE.</span>
+            </h3>
+
+            <p>
+                Calidosas FC hace parte de la estructura de
+                Calidosos FC, club nacido en marzo de 2025
+                con una visión de crecimiento deportivo,
+                competitivo y recreativo en el fútbol 11.
+            </p>
+
+        </div>
+
+
+        <div class="support-stats">
+
+            <div>
+                <strong>200+</strong>
+                <span>JUGADORES ACTIVOS</span>
+            </div>
+
+            <div>
+                <strong>3</strong>
+                <span>SEDES EN BOGOTÁ</span>
+            </div>
+
+            <div>
+                <strong>2025</strong>
+                <span>INICIO DEL CLUB</span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- FRASE FINAL -->
+
+    <div class="club-final">
+
+        <div class="club-final-line"></div>
+
+        <p>
+            EL FÚTBOL NO TIENE EDAD.
+        </p>
+
+        <h3>
+            TIENE
+            <span>HISTORIAS.</span>
+        </h3>
+
+        <div class="club-final-line"></div>
+
+    </div>
 
 </section>
-
 
 
 <!-- =====================================================
