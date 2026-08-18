@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>Calidosas FC | Fútbol 11 Femenino</title>
 
 <style>
 
-/* =========================
-   BASE
-========================= */
+/* =====================================================
+   RESET
+===================================================== */
 
 *{
     margin:0;
@@ -23,299 +26,534 @@ html{
 }
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#050d1c;
+    font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+    background:#050b16;
+
     color:#fff;
+
     overflow-x:hidden;
 }
 
 :root{
-    --navy:#050d1c;
-    --navy2:#081a33;
-    --blue:#0b2b52;
+
+    --navy:#050b16;
+    --navy2:#07182d;
+    --blue:#0c315b;
     --orange:#f58220;
-    --white:#ffffff;
+    --white:#fff;
     --gray:#aebccd;
+
 }
 
 
-/* =========================
+/* =====================================================
    NAVEGACIÓN
-========================= */
+===================================================== */
 
 nav{
+
     position:fixed;
+
     top:0;
     left:0;
+
     width:100%;
-    height:70px;
+    height:72px;
 
     display:flex;
+
     justify-content:space-between;
     align-items:center;
 
-    padding:8px 40px;
+    padding:8px 45px;
 
-    background:rgba(3,10,23,.94);
-    backdrop-filter:blur(12px);
+    background:
+    rgba(3,9,20,.88);
 
-    border-bottom:1px solid rgba(245,130,32,.25);
+    backdrop-filter:
+    blur(14px);
+
+    border-bottom:
+    1px solid
+    rgba(245,130,32,.25);
 
     z-index:1000;
+
 }
 
 .nav-brand{
+
     display:flex;
+
     align-items:center;
+
     gap:10px;
 
-    font-size:20px;
+    font-size:19px;
+
     font-weight:900;
+
     letter-spacing:1px;
+
 }
 
 .nav-brand img{
-    width:48px;
-    height:48px;
+
+    width:50px;
+    height:50px;
+
     object-fit:contain;
+
 }
 
 .nav-brand span{
-    color:var(--orange);
+
+    color:
+    var(--orange);
+
 }
 
 nav ul{
+
     display:flex;
-    gap:28px;
+
+    gap:30px;
+
     list-style:none;
+
 }
 
 nav a{
-    color:#dbe4ef;
-    font-size:13px;
-    font-weight:800;
+
+    color:
+    #dce5ef;
+
+    font-size:12px;
+
+    font-weight:900;
+
     letter-spacing:1px;
+
     text-transform:uppercase;
+
+    transition:.25s;
+
 }
 
 nav a:hover{
-    color:var(--orange);
+
+    color:
+    var(--orange);
+
 }
 
 
-/* =========================
-   HERO
-========================= */
+/* =====================================================
+   PORTADA
+===================================================== */
 
 .hero{
+
     min-height:100vh;
 
-    padding:
-    105px 25px 50px;
+    position:relative;
 
     display:flex;
+
     align-items:center;
+
     justify-content:center;
 
-    position:relative;
     overflow:hidden;
 
+    padding:
+    100px 25px 60px;
+
     background:
+
     radial-gradient(
-        circle at 80% 20%,
-        rgba(245,130,32,.15),
-        transparent 35%
+        circle at 75% 35%,
+        rgba(245,130,32,.16),
+        transparent 28%
     ),
 
     radial-gradient(
-        circle at 15% 80%,
-        rgba(15,70,140,.25),
-        transparent 40%
+        circle at 20% 80%,
+        rgba(18,70,130,.22),
+        transparent 38%
     ),
 
-    #050d1c;
+    linear-gradient(
+        135deg,
+        #030914,
+        #07182d
+    );
+
 }
+
+
+/* diagonales */
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:900px;
+
+    height:120%;
+
+    right:-420px;
+
+    top:-80px;
+
+    transform:
+    rotate(12deg);
+
+    background:
+
+    linear-gradient(
+        90deg,
+        transparent,
+        rgba(245,130,32,.06),
+        transparent
+    );
+
+}
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:700px;
+
+    height:120%;
+
+    left:-400px;
+
+    top:-80px;
+
+    transform:
+    rotate(-12deg);
+
+    background:
+
+    linear-gradient(
+        90deg,
+        transparent,
+        rgba(20,90,160,.10),
+        transparent
+    );
+
+}
+
+
+/* =====================================================
+   CONTENIDO HERO
+===================================================== */
 
 .hero-content{
-    position:relative;
-    z-index:2;
 
     width:100%;
-    max-width:1150px;
+
+    max-width:1180px;
+
+    position:relative;
+
+    z-index:5;
+
 }
 
-.hero-top{
-    display:flex;
+.hero-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    .8fr 1.2fr;
+
+    gap:45px;
+
     align-items:center;
-    gap:18px;
+
+}
+
+
+/* =====================================================
+   TEXTO PRINCIPAL
+===================================================== */
+
+.hero-copy{
+
+    position:relative;
+
+}
+
+.hero-kicker{
+
+    color:
+    var(--orange);
+
+    font-size:12px;
+
+    font-weight:900;
+
+    letter-spacing:4px;
+
+    margin-bottom:20px;
+
 }
 
 .hero-logo{
-    width:85px;
-    height:85px;
+
+    width:125px;
+
+    height:125px;
+
     object-fit:contain;
+
+    margin-bottom:20px;
 
     filter:
     drop-shadow(
-        0 10px 25px rgba(0,0,0,.7)
+        0 15px 35px
+        rgba(0,0,0,.65)
     );
-}
 
-.kicker{
-    color:var(--orange);
-    font-size:13px;
-    font-weight:900;
-    letter-spacing:4px;
-    text-transform:uppercase;
 }
 
 .hero h1{
-    margin-top:8px;
 
     font-size:
-    clamp(55px,9vw,110px);
+    clamp(55px,8vw,105px);
 
-    line-height:.85;
+    line-height:.82;
 
     font-weight:1000;
 
-    letter-spacing:-3px;
+    letter-spacing:-4px;
 
     text-transform:uppercase;
+
 }
 
 .hero h1 span{
-    color:var(--orange);
+
+    display:block;
+
+    color:
+    var(--orange);
+
+}
+
+.hero-line{
+
+    width:90px;
+
+    height:5px;
+
+    background:
+    var(--orange);
+
+    margin:
+    28px 0 22px;
+
 }
 
 .hero-subtitle{
-    margin-top:20px;
 
-    color:#d8e1ed;
+    font-size:18px;
 
-    font-size:19px;
     font-weight:600;
+
+    color:
+    #d6dfeb;
+
+    line-height:1.5;
+
+    max-width:480px;
+
 }
 
-.hero-subtitle strong{
-    color:var(--orange);
+.hero-motto{
+
+    margin-top:18px;
+
+    font-size:15px;
+
+    font-weight:900;
+
+    letter-spacing:3px;
+
+    color:
+    #fff;
+
+}
+
+.hero-motto span{
+
+    color:
+    var(--orange);
+
 }
 
 
-/* =========================
-   CARRUSEL DINÁMICO
-========================= */
+/* =====================================================
+   BOTONES
+===================================================== */
 
-.carousel-wrapper{
-    width:100%;
-    margin-top:32px;
+.hero-buttons{
 
     display:flex;
-    justify-content:center;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+
+    margin-top:30px;
+
+}
+
+.btn{
+
+    display:inline-block;
+
+    padding:
+    15px 25px;
+
+    background:
+    var(--orange);
+
+    color:#fff;
+
+    font-size:12px;
+
+    font-weight:900;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+    transition:.25s;
+
+}
+
+.btn:hover{
+
+    transform:
+    translateY(-3px);
+
+    box-shadow:
+    0 12px 25px
+    rgba(245,130,32,.25);
+
+}
+
+.btn-outline{
+
+    background:
+    transparent;
+
+    border:
+    1px solid
+    rgba(255,255,255,.4);
+
 }
 
 
-/*
-   ESTE CONTENEDOR NO TIENE
-   UNA ALTURA FIJA.
-*/
+/* =====================================================
+   CARRUSEL HERO
+===================================================== */
 
-.carousel{
+.hero-gallery{
+
     position:relative;
 
     width:100%;
-    max-width:1150px;
+
+    background:
+    #061329;
+
+    border:
+    1px solid
+    rgba(255,255,255,.08);
+
+    border-left:
+    5px solid
+    var(--orange);
+
+    box-shadow:
+    0 30px 80px
+    rgba(0,0,0,.55);
 
     overflow:hidden;
 
-    background:
-    linear-gradient(
-        135deg,
-        #061329,
-        #0b2344
-    );
-
-    border-left:5px solid var(--orange);
-
-    box-shadow:
-    0 25px 60px rgba(0,0,0,.55);
-
-    transition:
-    height .45s ease;
 }
 
+.hero-slides{
 
-/*
-   LOS SLIDES SE DESPLAZAN
-   HORIZONTALMENTE
-*/
-
-.slides{
     display:flex;
 
     width:100%;
 
     transition:
-    transform .65s
+    transform .7s
     cubic-bezier(.77,0,.18,1);
 
-    align-items:flex-start;
 }
 
+.hero-slide{
 
-/*
-   CADA FOTO OCUPA TODO EL ANCHO,
-   PERO SU ALTURA ES NATURAL.
-*/
-
-.slide{
     min-width:100%;
-    width:100%;
 
     display:flex;
 
-    align-items:center;
     justify-content:center;
 
-    background:#061329;
+    align-items:center;
+
+    background:
+    #061329;
+
 }
 
+.hero-slide img{
 
-/*
-   AQUÍ ESTÁ LA CLAVE.
-
-   height:auto
-   object-fit:contain
-
-   La fotografía NO SE RECORTA.
-*/
-
-.slide img{
     display:block;
 
     width:100%;
+
     height:auto;
 
-    max-width:100%;
+    max-height:620px;
 
     object-fit:contain;
-    object-position:center;
+
 }
 
 
-/* =========================
-   FLECHAS
-========================= */
+/* =====================================================
+   CONTROLES CARRUSEL
+===================================================== */
 
-.arrow{
+.gallery-arrow{
+
     position:absolute;
 
     top:50%;
 
-    transform:translateY(-50%);
+    transform:
+    translateY(-50%);
 
-    width:52px;
-    height:52px;
+    width:48px;
+
+    height:48px;
 
     border-radius:50%;
 
@@ -326,55 +564,63 @@ nav a:hover{
     background:
     rgba(0,0,0,.55);
 
-    color:white;
+    color:#fff;
 
-    font-size:32px;
+    font-size:28px;
 
     cursor:pointer;
 
-    z-index:20;
+    z-index:10;
 
-    transition:.25s;
 }
 
-.arrow:hover{
-    background:var(--orange);
-    border-color:var(--orange);
+.gallery-arrow:hover{
+
+    background:
+    var(--orange);
+
+    border-color:
+    var(--orange);
+
 }
 
-.prev{
-    left:18px;
+.gallery-prev{
+
+    left:15px;
+
 }
 
-.next{
-    right:18px;
+.gallery-next{
+
+    right:15px;
+
 }
 
+.gallery-dots{
 
-/* =========================
-   PUNTOS
-========================= */
-
-.dots{
     position:absolute;
 
     bottom:14px;
 
     left:0;
+
     right:0;
 
     display:flex;
 
     justify-content:center;
 
-    gap:7px;
+    gap:6px;
 
-    z-index:30;
+    z-index:15;
+
 }
 
-.dot{
-    width:8px;
-    height:8px;
+.gallery-dot{
+
+    width:7px;
+
+    height:7px;
 
     border-radius:50%;
 
@@ -383,195 +629,354 @@ nav a:hover{
 
     cursor:pointer;
 
-    transition:.2s;
 }
 
-.dot.active{
-    background:var(--orange);
+.gallery-dot.active{
 
-    transform:scale(1.4);
+    background:
+    var(--orange);
+
+    transform:
+    scale(1.4);
+
 }
 
 
-/* =========================
-   BOTONES
-========================= */
+/* =====================================================
+   SCROLL
+===================================================== */
 
-.hero-buttons{
-    display:flex;
+.scroll-indicator{
 
-    gap:12px;
+    position:absolute;
 
-    flex-wrap:wrap;
+    bottom:20px;
 
-    margin-top:22px;
-}
+    left:50%;
 
-.btn{
-    display:inline-block;
+    transform:
+    translateX(-50%);
 
-    padding:15px 28px;
+    color:
+    rgba(255,255,255,.55);
 
-    background:var(--orange);
-
-    color:white;
-
-    font-size:13px;
+    font-size:10px;
 
     font-weight:900;
 
-    letter-spacing:1px;
+    letter-spacing:3px;
 
-    text-transform:uppercase;
-
-    transition:.25s;
-}
-
-.btn:hover{
-    transform:translateY(-3px);
-
-    box-shadow:
-    0 10px 25px
-    rgba(245,130,32,.25);
-}
-
-.btn-outline{
-    background:transparent;
-
-    border:
-    1px solid
-    rgba(255,255,255,.45);
 }
 
 
-/* =========================
+/* =====================================================
    SECCIONES
-========================= */
+===================================================== */
 
 .section{
-    max-width:1150px;
+
+    max-width:1180px;
 
     margin:auto;
 
     padding:
     100px 25px;
+
 }
 
 .section-header{
+
     margin-bottom:45px;
 
     padding-bottom:18px;
 
     border-bottom:
     1px solid
-    rgba(255,255,255,.1);
+    rgba(255,255,255,.09);
+
 }
 
 .section-number{
-    color:var(--orange);
 
-    font-size:12px;
+    color:
+    var(--orange);
+
+    font-size:11px;
 
     font-weight:900;
 
     letter-spacing:3px;
 
-    margin-bottom:10px;
+    margin-bottom:12px;
+
 }
 
 .section-title{
+
     font-size:
-    clamp(38px,6vw,62px);
+    clamp(38px,6vw,65px);
 
     line-height:.9;
 
     font-weight:1000;
 
     text-transform:uppercase;
+
 }
 
 .section-title span{
-    color:var(--orange);
-}
 
-
-/* =========================
-   CLUB
-========================= */
-
-.about{
-    display:grid;
-
-    grid-template-columns:
-    1.1fr .9fr;
-
-    gap:45px;
-}
-
-.about-text{
-    color:#c3cfdd;
-
-    font-size:19px;
-
-    line-height:1.8;
-}
-
-.about-text strong{
-    color:white;
-}
-
-.about-box{
-    padding:35px;
-
-    background:
-    linear-gradient(
-        135deg,
-        #0b2344,
-        #07172d
-    );
-
-    border-left:
-    5px solid
+    color:
     var(--orange);
+
 }
 
-.about-box h3{
-    color:var(--orange);
 
-    font-size:27px;
+/* =====================================================
+   PLANTILLA
+===================================================== */
 
-    margin-bottom:15px;
-}
+.roster-intro{
 
-.about-box p{
-    color:#bdcad8;
+    color:
+    #aebccd;
+
+    max-width:700px;
 
     line-height:1.7;
+
+    margin-bottom:35px;
+
 }
 
+.roster{
 
-/* =========================
-   TARJETAS
-========================= */
-
-.cards{
     display:grid;
 
     grid-template-columns:
     repeat(4,1fr);
 
     gap:15px;
+
+}
+
+
+/*
+   TARJETA JUGADORA
+*/
+
+.player{
+
+    position:relative;
+
+    min-height:310px;
+
+    overflow:hidden;
+
+    background:
+
+    linear-gradient(
+        145deg,
+        #0b2749,
+        #06152a
+    );
+
+    border:
+    1px solid
+    rgba(255,255,255,.08);
+
+    transition:.3s;
+
+}
+
+.player:hover{
+
+    transform:
+    translateY(-6px);
+
+    border-color:
+    rgba(245,130,32,.7);
+
+}
+
+
+/*
+   FOTO
+
+   Por ahora dejamos
+   espacio preparado.
+*/
+
+.player-photo{
+
+    height:220px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #0c315b,
+        #07182d
+    );
+
+}
+
+.player-photo img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+
+/*
+   INFORMACIÓN
+*/
+
+.player-info{
+
+    padding:
+    17px 18px;
+
+}
+
+.player-number{
+
+    color:
+    var(--orange);
+
+    font-size:12px;
+
+    font-weight:900;
+
+    letter-spacing:2px;
+
+}
+
+.player-name{
+
+    font-size:20px;
+
+    font-weight:900;
+
+    margin-top:4px;
+
+}
+
+.player-position{
+
+    color:
+    #9eacbd;
+
+    font-size:12px;
+
+    margin-top:5px;
+
+    text-transform:uppercase;
+
+}
+
+
+/* =====================================================
+   CLUB
+===================================================== */
+
+.about{
+
+    display:grid;
+
+    grid-template-columns:
+    1.1fr .9fr;
+
+    gap:45px;
+
+}
+
+.about-text{
+
+    color:
+    #c2cedc;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+.about-box{
+
+    padding:35px;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #0b2749,
+        #07172d
+    );
+
+    border-left:
+    5px solid
+    var(--orange);
+
+}
+
+.about-box h3{
+
+    color:
+    var(--orange);
+
+    font-size:28px;
+
+    margin-bottom:15px;
+
+}
+
+.about-box p{
+
+    color:
+    #bdcad8;
+
+    line-height:1.7;
+
+}
+
+
+/* =====================================================
+   METODOLOGÍA
+===================================================== */
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:15px;
+
 }
 
 .card{
-    min-height:230px;
+
+    min-height:220px;
 
     padding:28px 22px;
 
     background:
+
     linear-gradient(
         145deg,
-        #0b274a,
+        #0b2749,
         #07172d
     );
 
@@ -580,221 +985,320 @@ nav a:hover{
     rgba(255,255,255,.08);
 
     transition:.3s;
+
 }
 
 .card:hover{
-    transform:translateY(-6px);
+
+    transform:
+    translateY(-6px);
 
     border-color:
     rgba(245,130,32,.6);
+
 }
 
 .card-icon{
-    font-size:38px;
+
+    font-size:35px;
 
     margin-bottom:20px;
+
 }
 
 .card h3{
+
     margin-bottom:12px;
 
-    font-size:20px;
+    font-size:19px;
+
 }
 
 .card p{
-    color:#aebccd;
+
+    color:
+    #aebccd;
 
     line-height:1.6;
 
     font-size:14px;
+
 }
 
 
-/* =========================
+/* =====================================================
    GALERÍA
-========================= */
+===================================================== */
 
 .gallery{
+
     display:grid;
 
     grid-template-columns:
     repeat(4,1fr);
 
     gap:8px;
+
 }
 
 .gallery img{
+
     width:100%;
+
     height:230px;
 
     object-fit:cover;
+
+    transition:.3s;
+
+}
+
+.gallery img:hover{
+
+    transform:
+    scale(1.03);
+
 }
 
 
-/* =========================
+/* =====================================================
    CTA
-========================= */
+===================================================== */
 
 .cta{
+
     text-align:center;
 
     padding:
-    90px 25px;
+    100px 25px;
 
     background:
+
     linear-gradient(
         135deg,
-        #d96710,
+        #d86710,
         #f58220
     );
+
 }
 
 .cta h2{
+
     font-size:
-    clamp(38px,6vw,70px);
+    clamp(40px,6vw,75px);
+
+    line-height:.9;
 
     font-weight:1000;
+
 }
 
 .cta p{
-    margin:
-    18px 0 28px;
 
-    font-size:19px;
+    margin:
+    20px 0 30px;
+
+    font-size:18px;
+
 }
 
 .cta .btn{
-    background:#061329;
+
+    background:
+    #061329;
+
 }
 
 
-/* =========================
+/* =====================================================
    FOOTER
-========================= */
+===================================================== */
 
 footer{
+
     text-align:center;
 
     padding:45px 20px;
 
-    background:#020711;
+    background:
+    #020711;
 
-    color:#8997aa;
+    color:
+    #8997aa;
+
 }
 
 .footer-logo{
+
     width:65px;
 
     margin-bottom:12px;
+
 }
 
 
-/* =========================
-   TABLET
-========================= */
+/* =====================================================
+   RESPONSIVE
+===================================================== */
 
-@media(max-width:900px){
+@media(max-width:950px){
 
     nav{
+
         padding:
         8px 20px;
+
     }
 
     nav ul{
+
         display:none;
+
     }
 
-    .about{
+    .hero-grid{
+
         grid-template-columns:1fr;
+
+    }
+
+    .hero-copy{
+
+        text-align:center;
+
+    }
+
+    .hero-logo{
+
+        margin:auto;
+
+    }
+
+    .hero-line{
+
+        margin:
+        25px auto;
+
+    }
+
+    .hero-subtitle{
+
+        margin:auto;
+
+    }
+
+    .hero-buttons{
+
+        justify-content:center;
+
+    }
+
+    .roster{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
     }
 
     .cards{
+
         grid-template-columns:
         repeat(2,1fr);
+
+    }
+
+    .about{
+
+        grid-template-columns:1fr;
+
     }
 
     .gallery{
+
         grid-template-columns:
         repeat(2,1fr);
+
     }
 
 }
 
-
-/* =========================
-   CELULAR
-========================= */
 
 @media(max-width:550px){
 
     .hero{
+
         padding:
-        95px 15px 35px;
+        95px 15px 50px;
+
+    }
+
+    .hero h1{
+
+        font-size:52px;
+
     }
 
     .hero-logo{
-        width:70px;
-        height:70px;
-    }
 
-    .hero h1{
-        font-size:51px;
+        width:90px;
+
+        height:90px;
+
     }
 
     .hero-subtitle{
+
         font-size:15px;
+
     }
 
-    .carousel{
-        border-left:
-        3px solid
-        var(--orange);
-    }
+    .roster{
 
-    .arrow{
-        width:42px;
-        height:42px;
+        grid-template-columns:1fr;
 
-        font-size:25px;
     }
 
     .cards{
+
         grid-template-columns:1fr;
+
     }
 
     .gallery{
+
         grid-template-columns:1fr;
+
     }
 
     .gallery img{
+
         height:260px;
+
     }
 
-}
+    .gallery-arrow{
 
+        width:40px;
 
-/* =========================
-   CELULAR PEQUEÑO
-========================= */
+        height:40px;
 
-@media(max-width:380px){
+        font-size:23px;
 
-    .hero h1{
-        font-size:43px;
     }
 
 }
 
 </style>
+
 </head>
 
 
 <body>
 
 
-<!-- =========================
-     NAVEGACIÓN
-========================= -->
+<!-- =====================================================
+     NAV
+===================================================== -->
 
 <nav>
 
@@ -809,7 +1313,12 @@ CALIDOSAS
 
 </div>
 
+
 <ul>
+
+<li>
+<a href="#plantilla">Plantilla</a>
+</li>
 
 <li>
 <a href="#club">Club</a>
@@ -833,260 +1342,80 @@ CALIDOSAS
 
 
 
-<!-- =========================
-     HERO
-========================= -->
+<!-- =====================================================
+     PORTADA
+===================================================== -->
 
 <header class="hero">
+
 
 <div class="hero-content">
 
 
-<div class="hero-top">
+<div class="hero-grid">
+
+
+<!-- ======================
+     TEXTO
+====================== -->
+
+<div class="hero-copy">
+
+
+<div class="hero-kicker">
+
+CLUB DEPORTIVO
+
+</div>
+
 
 <img
 class="hero-logo"
 src="images/escudo.jpeg"
 alt="Escudo Calidosas FC">
 
-<div class="kicker">
-CLUB DEPORTIVO
-</div>
-
-</div>
-
 
 <h1>
+
 CALIDOSAS
+
 <span>FC</span>
+
 </h1>
+
+
+<div class="hero-line"></div>
 
 
 <p class="hero-subtitle">
 
-FÚTBOL 11 FEMENINO
+Fútbol 11 femenino.
 
-<strong> · </strong>
-
-PASIÓN QUE SE JUEGA EN EQUIPO
+Un equipo construido con pasión,
+disciplina y carácter.
 
 </p>
 
 
+<div class="hero-motto">
 
-<!-- =========================
-     CARRUSEL
-========================= -->
-
-<div class="carousel-wrapper">
-
-<div
-class="carousel"
-id="carousel">
-
-
-<div
-class="slides"
-id="slides">
-
-
-<div class="slide">
-
-<img
-src="images/IMG_2447.jpeg"
-alt="Calidosas FC">
+PASIÓN
+<span>·</span>
+EQUIPO
+<span>·</span>
+CARÁCTER
 
 </div>
 
-
-<div class="slide">
-
-<img
-src="images/IMG_2448.jpeg"
-alt="Calidosas FC">
-
-</div>
-
-
-<div class="slide">
-
-<img
-src="images/IMG_3808.jpeg"
-alt="Calidosas FC">
-
-</div>
-
-
-<div class="slide">
-
-<img
-src="images/IMG_4025.jpeg"
-alt="Calidosas FC">
-
-</div>
-
-
-<div class="slide">
-
-<img
-src="images/IMG_4028.jpeg"
-alt="Calidosas FC">
-
-</div>
-
-
-<div class="slide">
-
-<img
-src="images/IMG_4031.jpeg"
-alt="Calidosas FC">
-
-</div>
-
-
-<div class="slide">
-
-<img
-src="images/IMG_4035.jpeg"
-alt="Calidosas FC">
-
-</div>
-
-
-<div class="slide">
-
-<img
-src="images/IMG_4049.jpeg"
-alt="Calidosas FC">
-
-</div>
-
-
-<div class="slide">
-
-<img
-src="images/IMG_4051.jpeg"
-alt="Calidosas FC">
-
-</div>
-
-
-<div class="slide">
-
-<img
-src="images/IMG_4052.jpeg"
-alt="Calidosas FC">
-
-</div>
-
-
-<div class="slide">
-
-<img
-src="images/IMG_4056.jpeg"
-alt="Calidosas FC">
-
-</div>
-
-
-<div class="slide">
-
-<img
-src="images/IMG_4057.jpeg"
-alt="Calidosas FC">
-
-</div>
-
-
-<div class="slide">
-
-<img
-src="images/IMG_4061.jpeg"
-alt="Calidosas FC">
-
-</div>
-
-
-<div class="slide">
-
-<img
-src="images/IMG_4063.jpeg"
-alt="Calidosas FC">
-
-</div>
-
-
-<div class="slide">
-
-<img
-src="images/IMG_4064.jpeg"
-alt="Calidosas FC">
-
-</div>
-
-
-<div class="slide">
-
-<img
-src="images/IMG_4068.jpeg"
-alt="Calidosas FC">
-
-</div>
-
-
-<div class="slide">
-
-<img
-src="images/IMG_4072.jpeg"
-alt="Calidosas FC">
-
-</div>
-
-
-</div>
-
-
-<button
-class="arrow prev"
-onclick="moveSlide(-1)">
-
-‹
-
-</button>
-
-
-<button
-class="arrow next"
-onclick="moveSlide(1)">
-
-›
-
-</button>
-
-
-<div
-class="dots"
-id="dots">
-</div>
-
-
-</div>
-
-</div>
-
-
-
-<!-- =========================
-     BOTONES
-========================= -->
 
 <div class="hero-buttons">
 
+
 <a
-href="#club"
+href="#plantilla"
 class="btn">
 
-CONOCE EL CLUB
+CONOCE EL EQUIPO
 
 </a>
 
@@ -1099,28 +1428,467 @@ class="btn btn-outline">
 
 </a>
 
+
 </div>
 
 
 </div>
+
+
+
+<!-- ======================
+     CARRUSEL
+====================== -->
+
+<div class="hero-gallery">
+
+
+<div
+class="hero-slides"
+id="heroSlides">
+
+
+<div class="hero-slide">
+
+<img
+src="images/IMG_2447.jpeg"
+alt="Calidosas FC">
+
+</div>
+
+
+<div class="hero-slide">
+
+<img
+src="images/IMG_2448.jpeg"
+alt="Calidosas FC">
+
+</div>
+
+
+<div class="hero-slide">
+
+<img
+src="images/IMG_3808.jpeg"
+alt="Calidosas FC">
+
+</div>
+
+
+<div class="hero-slide">
+
+<img
+src="images/IMG_4025.jpeg"
+alt="Calidosas FC">
+
+</div>
+
+
+<div class="hero-slide">
+
+<img
+src="images/IMG_4028.jpeg"
+alt="Calidosas FC">
+
+</div>
+
+
+<div class="hero-slide">
+
+<img
+src="images/IMG_4031.jpeg"
+alt="Calidosas FC">
+
+</div>
+
+
+<div class="hero-slide">
+
+<img
+src="images/IMG_4035.jpeg"
+alt="Calidosas FC">
+
+</div>
+
+
+<div class="hero-slide">
+
+<img
+src="images/IMG_4049.jpeg"
+alt="Calidosas FC">
+
+</div>
+
+
+<div class="hero-slide">
+
+<img
+src="images/IMG_4051.jpeg"
+alt="Calidosas FC">
+
+</div>
+
+
+<div class="hero-slide">
+
+<img
+src="images/IMG_4052.jpeg"
+alt="Calidosas FC">
+
+</div>
+
+
+<div class="hero-slide">
+
+<img
+src="images/IMG_4056.jpeg"
+alt="Calidosas FC">
+
+</div>
+
+
+<div class="hero-slide">
+
+<img
+src="images/IMG_4057.jpeg"
+alt="Calidosas FC">
+
+</div>
+
+
+<div class="hero-slide">
+
+<img
+src="images/IMG_4061.jpeg"
+alt="Calidosas FC">
+
+</div>
+
+
+<div class="hero-slide">
+
+<img
+src="images/IMG_4063.jpeg"
+alt="Calidosas FC">
+
+</div>
+
+
+<div class="hero-slide">
+
+<img
+src="images/IMG_4064.jpeg"
+alt="Calidosas FC">
+
+</div>
+
+
+<div class="hero-slide">
+
+<img
+src="images/IMG_4068.jpeg"
+alt="Calidosas FC">
+
+</div>
+
+
+<div class="hero-slide">
+
+<img
+src="images/IMG_4072.jpeg"
+alt="Calidosas FC">
+
+</div>
+
+
+</div>
+
+
+<button
+class="gallery-arrow gallery-prev"
+onclick="moveHero(-1)">
+
+‹
+
+</button>
+
+
+<button
+class="gallery-arrow gallery-next"
+onclick="moveHero(1)">
+
+›
+
+</button>
+
+
+<div
+class="gallery-dots"
+id="heroDots">
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+<div class="scroll-indicator">
+
+SCROLL ↓
+
+</div>
+
 
 </header>
 
 
 
-<!-- =========================
+<!-- =====================================================
+     PLANTILLA
+===================================================== -->
+
+<section
+class="section"
+id="plantilla">
+
+
+<div class="section-header">
+
+
+<div class="section-number">
+
+01 / EQUIPO
+
+</div>
+
+
+<h2 class="section-title">
+
+NUESTRA
+<span>PLANTILLA</span>
+
+</h2>
+
+
+</div>
+
+
+<p class="roster-intro">
+
+Conoce a las mujeres que representan
+los colores de Calidosas FC.
+
+Esta sección quedará preparada para
+presentar a cada jugadora, su dorsal
+y posición dentro del equipo.
+
+</p>
+
+
+<div class="roster">
+
+
+<!-- ======================
+     JUGADORA 1
+====================== -->
+
+<div class="player">
+
+
+<div class="player-photo">
+
+<img
+src="images/IMG_4025.jpeg"
+alt="Jugadora Calidosas">
+
+</div>
+
+
+<div class="player-info">
+
+<div class="player-number">
+
+#01
+
+</div>
+
+<div class="player-name">
+
+JUGADORA
+
+</div>
+
+<div class="player-position">
+
+PORTERA
+
+</div>
+
+</div>
+
+
+</div>
+
+
+
+<!-- ======================
+     JUGADORA 2
+====================== -->
+
+<div class="player">
+
+
+<div class="player-photo">
+
+<img
+src="images/IMG_4035.jpeg"
+alt="Jugadora Calidosas">
+
+</div>
+
+
+<div class="player-info">
+
+<div class="player-number">
+
+#02
+
+</div>
+
+<div class="player-name">
+
+JUGADORA
+
+</div>
+
+<div class="player-position">
+
+DEFENSA
+
+</div>
+
+</div>
+
+
+</div>
+
+
+
+<!-- ======================
+     JUGADORA 3
+====================== -->
+
+<div class="player">
+
+
+<div class="player-photo">
+
+<img
+src="images/IMG_4052.jpeg"
+alt="Jugadora Calidosas">
+
+</div>
+
+
+<div class="player-info">
+
+<div class="player-number">
+
+#03
+
+</div>
+
+<div class="player-name">
+
+JUGADORA
+
+</div>
+
+<div class="player-position">
+
+MEDIOCAMPISTA
+
+</div>
+
+</div>
+
+
+</div>
+
+
+
+<!-- ======================
+     JUGADORA 4
+====================== -->
+
+<div class="player">
+
+
+<div class="player-photo">
+
+<img
+src="images/IMG_4068.jpeg"
+alt="Jugadora Calidosas">
+
+</div>
+
+
+<div class="player-info">
+
+<div class="player-number">
+
+#04
+
+</div>
+
+<div class="player-name">
+
+JUGADORA
+
+</div>
+
+<div class="player-position">
+
+DELANTERA
+
+</div>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+<!-- =====================================================
      CLUB
-========================= -->
+===================================================== -->
 
 <section
 class="section"
 id="club">
 
+
 <div class="section-header">
 
+
 <div class="section-number">
-01 / IDENTIDAD
+
+02 / IDENTIDAD
+
 </div>
+
 
 <h2 class="section-title">
 
@@ -1128,6 +1896,7 @@ SOMOS
 <span>CALIDOSAS</span>
 
 </h2>
+
 
 </div>
 
@@ -1137,46 +1906,46 @@ SOMOS
 
 <div class="about-text">
 
+
 <p>
 
 <strong>Calidosas FC</strong> es un club
 de fútbol 11 femenino creado para
-mujeres que aman el fútbol.
+mujeres que aman el fútbol y quieren
+seguir disfrutándolo dentro de un
+entorno deportivo, competitivo y
+humano.
 
 </p>
+
 
 <br>
 
-<p>
-
-Somos un espacio de competencia,
-entrenamiento, amistad y pasión
-por el deporte.
-
-</p>
-
-<br>
 
 <p>
 
-Cada jugadora hace parte de una
-comunidad que quiere seguir creciendo
-dentro y fuera de la cancha.
+Somos una comunidad donde el
+entrenamiento, la amistad, la disciplina
+y la pasión por el fútbol van de la mano.
 
 </p>
+
 
 </div>
 
 
 <div class="about-box">
 
+
 <h3>
 
 UN EQUIPO.
 <br>
+
 UNA PASIÓN.
 
 </h3>
+
 
 <p>
 
@@ -1188,28 +1957,35 @@ Y el equipo nos hace fuertes.
 
 </p>
 
+
 </div>
 
 
 </div>
+
 
 </section>
 
 
 
-<!-- =========================
+<!-- =====================================================
      FÚTBOL
-========================= -->
+===================================================== -->
 
 <section
 class="section"
 id="futbol">
 
+
 <div class="section-header">
 
+
 <div class="section-number">
-02 / METODOLOGÍA
+
+03 / METODOLOGÍA
+
 </div>
+
 
 <h2 class="section-title">
 
@@ -1217,6 +1993,7 @@ NUESTRO
 <span>FÚTBOL</span>
 
 </h2>
+
 
 </div>
 
@@ -1235,8 +2012,10 @@ TÉCNICA
 </h3>
 
 <p>
+
 Control, pase, conducción,
 regate y definición.
+
 </p>
 
 </div>
@@ -1253,8 +2032,10 @@ TÁCTICA
 </h3>
 
 <p>
+
 Posicionamiento, principios
 de juego y toma de decisiones.
+
 </p>
 
 </div>
@@ -1271,8 +2052,10 @@ FÍSICO
 </h3>
 
 <p>
+
 Fuerza, velocidad, resistencia
 y potencia aplicada al fútbol.
+
 </p>
 
 </div>
@@ -1289,8 +2072,10 @@ ARQUERAS
 </h3>
 
 <p>
+
 Trabajo específico para nuestras
 guardianas del arco.
+
 </p>
 
 </div>
@@ -1298,23 +2083,29 @@ guardianas del arco.
 
 </div>
 
+
 </section>
 
 
 
-<!-- =========================
+<!-- =====================================================
      GALERÍA
-========================= -->
+===================================================== -->
 
 <section
 class="section"
 id="galeria">
 
+
 <div class="section-header">
 
+
 <div class="section-number">
-03 / MOMENTOS
+
+04 / MOMENTOS
+
 </div>
+
 
 <h2 class="section-title">
 
@@ -1323,40 +2114,48 @@ CALIDOSAS
 
 </h2>
 
+
 </div>
 
 
 <div class="gallery">
 
+
 <img
 src="images/IMG_4025.jpeg"
 alt="Calidosas FC">
+
 
 <img
 src="images/IMG_4035.jpeg"
 alt="Calidosas FC">
 
+
 <img
 src="images/IMG_4052.jpeg"
 alt="Calidosas FC">
+
 
 <img
 src="images/IMG_4068.jpeg"
 alt="Calidosas FC">
 
+
 </div>
+
 
 </section>
 
 
 
-<!-- =========================
+<!-- =====================================================
      CONTACTO
-========================= -->
+===================================================== -->
 
 <section
 class="cta"
 id="contacto">
+
 
 <h2>
 
@@ -1365,12 +2164,14 @@ CALIDOSA?
 
 </h2>
 
+
 <p>
 
 El próximo capítulo también
 puede ser tuyo.
 
 </p>
+
 
 <a
 href="#"
@@ -1380,207 +2181,110 @@ QUIERO INFORMACIÓN
 
 </a>
 
+
 </section>
 
 
 
-<!-- =========================
+<!-- =====================================================
      FOOTER
-========================= -->
+===================================================== -->
 
 <footer>
+
 
 <img
 class="footer-logo"
 src="images/escudo.jpeg"
 alt="Calidosas FC">
 
-<p>
-© 2026 CALIDOSAS FC
-</p>
 
 <p>
-Fútbol femenino con pasión y carácter.
+
+© 2026 CALIDOSAS FC
+
 </p>
+
+
+<p>
+
+Fútbol femenino con pasión y carácter.
+
+</p>
+
 
 </footer>
 
 
 
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
 <script>
 
-/* =====================================================
-   CARRUSEL DINÁMICO
-===================================================== */
 
-const slides =
-document.getElementById("slides");
+/* =========================
+   CARRUSEL
+========================= */
 
-const carousel =
-document.getElementById("carousel");
+const heroSlides =
+document.getElementById("heroSlides");
 
-const slideItems =
-document.querySelectorAll(".slide");
+const heroItems =
+document.querySelectorAll(".hero-slide");
 
-const totalSlides =
-slideItems.length;
+const heroDots =
+document.getElementById("heroDots");
 
-const dotsContainer =
-document.getElementById("dots");
+let heroIndex = 0;
 
-let currentSlide = 0;
+const heroTotal =
+heroItems.length;
 
 
-/*
-   Crear puntos
-*/
+/* CREAR PUNTOS */
 
 for(
-    let i = 0;
-    i < totalSlides;
+    let i=0;
+    i<heroTotal;
     i++
 ){
 
     const dot =
     document.createElement("div");
 
-    dot.className = "dot";
+    dot.className =
+    "gallery-dot";
 
-    dot.addEventListener(
-        "click",
-        function(){
+    dot.onclick =
+    function(){
 
-            currentSlide = i;
+        heroIndex = i;
 
-            updateCarousel();
+        updateHero();
 
-        }
-    );
+    };
 
-    dotsContainer.appendChild(dot);
-}
-
-
-/*
-   Ajustar altura del carrusel
-   según la fotografía actual.
-*/
-
-function adjustCarouselHeight(){
-
-    const currentImage =
-    slideItems[currentSlide]
-    .querySelector("img");
-
-
-    if(
-        currentImage.complete
-    ){
-
-        setCarouselHeight(
-            currentImage
-        );
-
-    }else{
-
-        currentImage.onload =
-        function(){
-
-            setCarouselHeight(
-                currentImage
-            );
-
-        };
-
-    }
+    heroDots.appendChild(dot);
 
 }
 
 
-/*
-   Calcular proporción
-*/
+/* ACTUALIZAR */
 
-function setCarouselHeight(image){
+function updateHero(){
 
-    const width =
-    image.naturalWidth;
-
-    const height =
-    image.naturalHeight;
-
-
-    if(
-        !width ||
-        !height
-    ){
-
-        return;
-
-    }
-
-
-    const carouselWidth =
-    carousel.clientWidth;
-
-
-    let newHeight =
-    carouselWidth *
-    (height / width);
-
-
-    /*
-       Limites para que
-       tampoco sea exageradamente alto.
-    */
-
-    const minHeight = 300;
-
-    const maxHeight =
-    window.innerWidth <= 600
-    ? 650
-    : 700;
-
-
-    if(
-        newHeight < minHeight
-    ){
-
-        newHeight =
-        minHeight;
-
-    }
-
-
-    if(
-        newHeight > maxHeight
-    ){
-
-        newHeight =
-        maxHeight;
-
-    }
-
-
-    carousel.style.height =
-    newHeight + "px";
-}
-
-
-/*
-   Actualizar carrusel
-*/
-
-function updateCarousel(){
-
-    slides.style.transform =
+    heroSlides.style.transform =
     "translateX(-" +
-    (currentSlide * 100) +
+    heroIndex * 100 +
     "%)";
 
 
     const dots =
-    document.querySelectorAll(".dot");
+    document.querySelectorAll(
+        ".gallery-dot"
+    );
 
 
     dots.forEach(
@@ -1588,96 +2292,66 @@ function updateCarousel(){
 
             dot.classList.toggle(
                 "active",
-                index === currentSlide
+                index === heroIndex
             );
 
         }
     );
 
-
-    adjustCarouselHeight();
 }
 
 
-/*
-   Botones
-*/
+/* BOTONES */
 
-function moveSlide(direction){
+function moveHero(direction){
 
-    currentSlide += direction;
+    heroIndex += direction;
 
 
     if(
-        currentSlide >=
-        totalSlides
+        heroIndex >= heroTotal
     ){
 
-        currentSlide = 0;
+        heroIndex=0;
 
     }
 
 
     if(
-        currentSlide < 0
+        heroIndex < 0
     ){
 
-        currentSlide =
-        totalSlides - 1;
+        heroIndex =
+        heroTotal-1;
 
     }
 
 
-    updateCarousel();
+    updateHero();
+
 }
 
 
-/*
-   Recalcular si cambia
-   el tamaño de la pantalla.
-*/
-
-window.addEventListener(
-    "resize",
-    function(){
-
-        adjustCarouselHeight();
-
-    }
-);
-
-
-/*
-   Cambio automático
-   cada 5 segundos.
-*/
+/* AUTOMÁTICO */
 
 setInterval(
     function(){
 
-        moveSlide(1);
+        moveHero(1);
 
     },
     5000
 );
 
 
-/*
-   Esperar a que las fotos
-   estén disponibles.
-*/
+/* INICIO */
 
-window.addEventListener(
-    "load",
-    function(){
+updateHero();
 
-        updateCarousel();
-
-    }
-);
 
 </script>
 
 
 </body>
+
 </html>
