@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calidosas FC | Fútbol 11 Femenino</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #07152b;
+      color: white;
+    }
+
+    header {
+      min-height: 90vh;
+      background:
+        linear-gradient(rgba(3, 12, 28, 0.78), rgba(3, 12, 28, 0.92)),
+        radial-gradient(circle at top right, #f58220 0%, transparent 35%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .hero {
+      max-width: 900px;
+    }
+
+    .badge {
+      font-size: 70px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(45px, 8vw, 90px);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    h1 span {
+      color: #f58220;
+    }
+
+    .subtitle {
+      font-size: 22px;
+      margin: 20px 0 35px;
+      color: #dce6f5;
+    }
+
+    .button {
+      display: inline-block;
+      background: #f58220;
+      color: white;
+      padding: 16px 30px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin: 8px;
+    }
+
+    .button.secondary {
+      background: transparent;
+      border: 2px solid #f58220;
+    }
+
+    section {
+      padding: 70px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section-title {
+      font-size: 38px;
+      text-transform: uppercase;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .section-title span {
+      color: #f58220;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #0d2343;
+      padding: 30px;
+      border-radius: 12px;
+      border: 1px solid rgba(245, 130, 32, 0.25);
+      text-align: center;
+    }
+
+    .card h3 {
+      color: #f58220;
+      margin-bottom: 12px;
+      font-size: 22px;
+    }
+
+    .card p {
+      color: #cbd6e5;
+      line-height: 1.6;
+    }
+
+    .cta {
+      background: #f58220;
+      text-align: center;
+      max-width: none;
+    }
+
+    .cta h2 {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      background: #030b18;
+      text-align: center;
+      padding: 30px 20px;
+      color: #aeb9c9;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        min-height: 80vh;
+      }
+
+      .subtitle {
+        font-size: 18px;
+      }
+
+      .section-title {
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="hero">
+      <div class="badge">⚽</div>
+
+      <h1>CALIDOSAS <span>FC</span></h1>
+
+      <p class="subtitle">
+        Club Deportivo Calidosas Fútbol 11
+        <br>
+        Fútbol femenino • Pasión • Equipo • Competencia
+      </p>
+
+      <a href="#club" class="button">Conoce el club</a>
+      <a href="#contacto" class="button secondary">Únete a Calidosas</a>
+    </div>
+  </header>
+
+  <section id="club">
+    <h2 class="section-title">Somos <span>Calidosas</span></h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>⚽ Fútbol 11</h3>
+        <p>
+          Un espacio para mujeres que quieren disfrutar,
+          competir y seguir creciendo dentro del fútbol.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>🔥 Pasión</h3>
+        <p>
+          Entrenamos con compromiso, disciplina y amor
+          por el deporte.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>🤝 Equipo</h3>
+        <p>
+          Más que un equipo: una comunidad de mujeres
+          unidas por el fútbol.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>🏆 Competencia</h3>
+        <p>
+          Preparación física, técnica y táctica para
+          enfrentar nuevos retos.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">¿Por qué <span>Calidosas?</span></h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>Entrenamientos</h3>
+        <p>Sesiones estructuradas para mejorar tu rendimiento.</p>
+      </div>
+
+      <div class="card">
+        <h3>Preparación</h3>
+        <p>Trabajo físico, técnico y táctico orientado al fútbol 11.</p>
+      </div>
+
+      <div class="card">
+        <h3>Comunidad</h3>
+        <p>Un grupo donde el fútbol se convierte en amistad y experiencia.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="cta" id="contacto">
+    <h2>¿Quieres ser una CALIDOSA?</h2>
+
+    <p>
+      Conoce nuestro proceso de inscripción y empieza a entrenar con nosotros.
+    </p>
+
+    <br>
+
+    <a href="#" class="button">Quiero información</a>
+  </section>
+
+  <footer>
+    <p>© 2026 Calidosas FC — Club Deportivo Calidosas Fútbol 11</p>
+    <p>Fútbol femenino con pasión y carácter.</p>
+  </footer>
+
+</body>
+</html>
