@@ -9,6 +9,155 @@
 
 <style>
 
+   /* =====================================================
+   VIDEOS
+===================================================== */
+
+.videos-section{
+    position:relative;
+    overflow:hidden;
+}
+
+.videos-intro{
+    max-width:650px;
+    margin:15px 0 40px;
+
+    color:#8f9daa;
+
+    font-size:14px;
+    line-height:1.8;
+}
+
+
+/* GRID */
+
+.videos-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:25px;
+
+    margin-top:35px;
+}
+
+
+/* TARJETA */
+
+.video-card{
+
+    overflow:hidden;
+
+    background:#081726;
+
+    border:1px solid rgba(255,255,255,.07);
+
+    transition:
+        transform .25s ease,
+        border-color .25s ease;
+}
+
+.video-card:hover{
+
+    transform:translateY(-5px);
+
+    border-color:
+        rgba(255,120,0,.35);
+}
+
+
+/* VIDEO */
+
+.video-frame{
+
+    position:relative;
+
+    width:100%;
+
+    aspect-ratio:16 / 9;
+
+    background:#02070c;
+
+    overflow:hidden;
+}
+
+.video-frame iframe{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    border:0;
+}
+
+
+/* INFORMACIÓN */
+
+.video-info{
+
+    padding:22px 24px 25px;
+}
+
+
+.video-category{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    color:var(--orange);
+
+    font-size:9px;
+
+    font-weight:1000;
+
+    letter-spacing:2px;
+}
+
+
+.video-info h3{
+
+    margin:0 0 8px;
+
+    color:#fff;
+
+    font-size:20px;
+
+    font-weight:1000;
+}
+
+
+.video-info p{
+
+    margin:0;
+
+    color:#7f8d9a;
+
+    font-size:12px;
+
+    line-height:1.6;
+}
+
+
+/* -----------------------------------------------------
+   RESPONSIVE
+----------------------------------------------------- */
+
+@media(max-width:800px){
+
+    .videos-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
    /* FOTO DE JUGADORA */
 
 .player-photo{
@@ -1681,6 +1830,72 @@ body{
     color:var(--orange);
 
 }
+
+   <!-- =====================================================
+     VIDEOS
+===================================================== -->
+
+<section class="section videos-section" id="videos">
+
+    <div class="section-tag">
+        CALIDOSAS FC · VIDEOS
+    </div>
+
+    <h2 class="section-title">
+        ASÍ VIVIMOS
+        <span>EL FÚTBOL.</span>
+    </h2>
+
+    <p class="videos-intro">
+        Entrenamientos, sesiones y momentos que hacen parte
+        del proceso de Calidosas FC Femenino.
+    </p>
+
+
+    <div class="videos-grid">
+
+        <!-- VIDEO 01 -->
+
+        <article class="video-card">
+
+            <div class="video-frame">
+
+                <iframe
+                    src="https://www.youtube.com/embed/esPE9-0Oopk"
+                    title="Calidosas FC Femenino"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+            <div class="video-info">
+
+                <span class="video-category">
+                    CALIDOSAS FEMENINO
+                </span>
+
+                <h3>
+                    Sesión de entrenamiento
+                </h3>
+
+                <p>
+                    Trabajo y preparación dentro de la cancha.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!--
+        AQUÍ AGREGAREMOS LOS SIGUIENTES VIDEOS
+        -->
+
+    </div>
+
+</section>
 
 
 /* =====================================================
