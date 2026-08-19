@@ -38,8 +38,18 @@
 
 /* EFECTO AL PASAR EL MOUSE */
 
+.feature{
+    transition:
+        transform .35s ease,
+        border-color .35s ease;
+}
+
+.feature:hover{
+    transform:translateY(-8px);
+}
+
 .feature:hover .feature-image img{
-    transform:scale(1.05);
+    transform:scale(1.12);
 }
 
    /* =====================================================
