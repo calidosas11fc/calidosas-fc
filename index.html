@@ -10,6 +10,183 @@
 <style>
 
    /* =====================================================
+   CONTACTO + REDES
+===================================================== */
+
+.cta{
+    position:relative;
+    overflow:hidden;
+}
+
+.cta-content{
+    max-width:900px;
+    margin:0 auto;
+    text-align:center;
+}
+
+.cta-content h2{
+    margin:20px 0;
+
+    font-size:
+        clamp(42px, 7vw, 82px);
+
+    line-height:.95;
+
+    font-weight:1000;
+}
+
+.cta-content h2 span{
+    color:var(--orange);
+}
+
+.cta-content p{
+    max-width:600px;
+    margin:0 auto 30px;
+
+    color:#8d9aa6;
+
+    font-size:15px;
+    line-height:1.7;
+}
+
+
+/* BOTÓN PRINCIPAL */
+
+.cta-main{
+    display:inline-flex;
+
+    margin:10px 0 50px;
+
+    min-width:230px;
+
+    justify-content:center;
+}
+
+
+/* REDES */
+
+.social-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap:15px;
+
+    max-width:700px;
+
+    margin:0 auto;
+}
+
+
+.social-card{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    padding:20px;
+
+    text-align:left;
+
+    text-decoration:none;
+
+    background:#081726;
+
+    border:1px solid
+        rgba(255,255,255,.07);
+
+    transition:
+        transform .3s ease,
+        border-color .3s ease,
+        background .3s ease;
+}
+
+
+.social-card:hover{
+
+    transform:translateY(-6px);
+
+    background:#0c1e2e;
+
+    border-color:
+        rgba(255,120,0,.45);
+}
+
+
+/* ICONOS */
+
+.social-icon{
+
+    width:48px;
+    height:48px;
+
+    flex-shrink:0;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:12px;
+
+    background:
+        rgba(255,120,0,.12);
+
+    color:var(--orange);
+
+    font-size:22px;
+
+    font-weight:1000;
+}
+
+
+.social-card strong{
+
+    display:block;
+
+    color:#fff;
+
+    font-size:14px;
+
+    font-weight:1000;
+}
+
+
+.social-card span{
+
+    display:block;
+
+    margin-top:4px;
+
+    color:#788795;
+
+    font-size:11px;
+}
+
+
+/* CELULAR */
+
+@media(max-width:650px){
+
+    .social-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .cta-content h2{
+
+        font-size:44px;
+
+    }
+
+}
+
+   /* =====================================================
    NUESTRO FÚTBOL - IMÁGENES
 ===================================================== */
 
@@ -3777,50 +3954,148 @@ alt="Calidosas FC">
 
 
 <!-- =====================================================
-     CTA
+     CONTACTO + REDES
 ===================================================== -->
 
 <section
 class="cta"
 id="contacto">
 
+    <div class="cta-content">
 
-<div class="cta-content">
+        <div class="section-tag">
+            CALIDOSAS FC · CONTACTO
+        </div>
 
+        <h2>
+            ¿QUIERES
+            <br>
+            <span>SER CALIDOSA?</span>
+        </h2>
 
-<h2>
-
-¿QUIERES
-<br>
-
-SER CALIDOSA?
-
-</h2>
-
-
-<p>
-
-El próximo capítulo
-también puede ser tuyo.
-
-</p>
+        <p>
+            El próximo capítulo también puede ser tuyo.
+            Entrena, compite y vive el fútbol con nosotros.
+        </p>
 
 
-<a
-href="#"
-class="btn">
+        <!-- BOTÓN PRINCIPAL -->
 
-QUIERO INFORMACIÓN
+        <a
+            href="https://wa.me/573019072327"
+            target="_blank"
+            class="btn cta-main">
 
-</a>
+            HABLAR POR WHATSAPP
+
+        </a>
 
 
-</div>
+        <!-- REDES -->
+
+        <div class="social-grid">
+
+
+            <!-- INSTAGRAM -->
+
+            <a
+                href="https://www.instagram.com/calidosasfutbol11fc/"
+                target="_blank"
+                class="social-card">
+
+                <div class="social-icon">
+                    ◎
+                </div>
+
+                <div>
+                    <strong>
+                        Instagram
+                    </strong>
+
+                    <span>
+                        @calidosasfutbol11fc
+                    </span>
+                </div>
+
+            </a>
+
+
+            <!-- TIKTOK -->
+
+            <a
+                href="https://www.tiktok.com/@calidosas.futbol"
+                target="_blank"
+                class="social-card">
+
+                <div class="social-icon">
+                    ♪
+                </div>
+
+                <div>
+                    <strong>
+                        TikTok
+                    </strong>
+
+                    <span>
+                        @calidosas.futbol
+                    </span>
+                </div>
+
+            </a>
+
+
+            <!-- YOUTUBE -->
+
+            <a
+                href="https://www.youtube.com/@Calidosas11F.C"
+                target="_blank"
+                class="social-card">
+
+                <div class="social-icon">
+                    ▶
+                </div>
+
+                <div>
+                    <strong>
+                        YouTube
+                    </strong>
+
+                    <span>
+                        Calidosas FC
+                    </span>
+                </div>
+
+            </a>
+
+
+            <!-- EMAIL -->
+
+            <a
+                href="mailto:calidosos.f11@gmail.com"
+                class="social-card">
+
+                <div class="social-icon">
+                    @
+                </div>
+
+                <div>
+                    <strong>
+                        Email
+                    </strong>
+
+                    <span>
+                        calidosos.f11@gmail.com
+                    </span>
+                </div>
+
+            </a>
+
+
+        </div>
+
+    </div>
 
 </section>
-
-
-
 <!-- =====================================================
      FOOTER
 ===================================================== -->
