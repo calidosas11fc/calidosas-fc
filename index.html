@@ -10,6 +10,39 @@
 <style>
 
    /* =====================================================
+   NUESTRO FÚTBOL - IMÁGENES
+===================================================== */
+
+.feature-image{
+    width:100%;
+    height:190px;
+    margin-bottom:22px;
+
+    overflow:hidden;
+
+    background:#071522;
+}
+
+.feature-image img{
+    width:100%;
+    height:100%;
+
+    display:block;
+
+    object-fit:cover;
+    object-position:center;
+
+    transition:transform .4s ease;
+}
+
+
+/* EFECTO AL PASAR EL MOUSE */
+
+.feature:hover .feature-image img{
+    transform:scale(1.05);
+}
+
+   /* =====================================================
    VIDEOS
 ===================================================== */
 
@@ -3544,7 +3577,17 @@ NUESTRO
 <div class="features">
 
 
+<!-- 01 TÉCNICA -->
+
 <div class="feature">
+
+<div class="feature-image">
+
+<img
+src="images/tecnica.jpeg"
+alt="Entrenamiento técnico Calidosas FC">
+
+</div>
 
 <div class="feature-number">
 01
@@ -3564,7 +3607,17 @@ regate y finalización.
 </div>
 
 
+<!-- 02 TÁCTICA -->
+
 <div class="feature">
+
+<div class="feature-image">
+
+<img
+src="images/tactica.jpeg"
+alt="Trabajo táctico Calidosas FC">
+
+</div>
 
 <div class="feature-number">
 02
@@ -3585,7 +3638,17 @@ de decisiones.
 </div>
 
 
+<!-- 03 PREPARACIÓN FÍSICA -->
+
 <div class="feature">
+
+<div class="feature-image">
+
+<img
+src="images/fisica.jpeg"
+alt="Preparación física Calidosas FC">
+
+</div>
 
 <div class="feature-number">
 03
@@ -3606,7 +3669,17 @@ aplicadas al fútbol.
 </div>
 
 
+<!-- 04 ARQUERAS -->
+
 <div class="feature">
+
+<div class="feature-image">
+
+<img
+src="images/arquera.jpeg"
+alt="Entrenamiento de arqueras Calidosas FC">
+
+</div>
 
 <div class="feature-number">
 04
@@ -3630,9 +3703,6 @@ del arco.
 </div>
 
 </section>
-
-
-
 <!-- =====================================================
      GALERÍA
 ===================================================== -->
