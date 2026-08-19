@@ -2,6 +2,10 @@
 <html lang="es">
 <head>
 
+   <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -9,57 +13,150 @@
 
 <style>
 
-   /* =====================================================
+  /* =====================================================
    CONTACTO + REDES
 ===================================================== */
 
 .cta{
     position:relative;
     overflow:hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #c9580b 0%,
+            #e86f12 50%,
+            #f47b18 100%
+        );
 }
+
+
+/* TEXTO GIGANTE DE FONDO */
+
+.cta::before{
+
+    opacity:.08;
+
+}
+
+
+/* CONTENIDO */
 
 .cta-content{
-    max-width:900px;
+
+    position:relative;
+    z-index:2;
+
+    max-width:950px;
+
     margin:0 auto;
+
     text-align:center;
+
 }
+
+
+.cta-content .section-tag{
+
+    color:rgba(255,255,255,.65);
+
+}
+
+
+/* TITULO */
 
 .cta-content h2{
+
     margin:20px 0;
 
-    font-size:
-        clamp(42px, 7vw, 82px);
+    color:#fff;
 
-    line-height:.95;
+    font-size:
+        clamp(48px, 7vw, 86px);
+
+    line-height:.92;
 
     font-weight:1000;
+
+    letter-spacing:-2px;
+
 }
+
 
 .cta-content h2 span{
-    color:var(--orange);
+
+    color:#fff;
+
 }
+
+
+/* TEXTO */
 
 .cta-content p{
-    max-width:600px;
-    margin:0 auto 30px;
 
-    color:#8d9aa6;
+    max-width:650px;
 
-    font-size:15px;
+    margin:0 auto 35px;
+
+    color:rgba(255,255,255,.92);
+
+    font-size:17px;
+
     line-height:1.7;
+
 }
 
 
-/* BOTÓN PRINCIPAL */
+/* WHATSAPP */
 
 .cta-main{
+
     display:inline-flex;
 
-    margin:10px 0 50px;
-
-    min-width:230px;
+    align-items:center;
 
     justify-content:center;
+
+    gap:12px;
+
+    min-width:260px;
+
+    min-height:58px;
+
+    margin:5px 0 55px;
+
+    background:#071522;
+
+    color:#fff;
+
+    font-size:12px;
+
+    font-weight:1000;
+
+    letter-spacing:1px;
+
+    text-decoration:none;
+
+    transition:
+        transform .3s ease,
+        background .3s ease;
+
+}
+
+
+.cta-main i{
+
+    font-size:23px;
+
+}
+
+
+.cta-main:hover{
+
+    transform:translateY(-4px);
+
+    background:#000b13;
+
 }
 
 
@@ -72,37 +169,45 @@
     grid-template-columns:
         repeat(2, 1fr);
 
-    gap:15px;
+    gap:16px;
 
-    max-width:700px;
+    max-width:780px;
 
     margin:0 auto;
+
 }
 
 
+/* TARJETAS */
+
 .social-card{
+
+    position:relative;
 
     display:flex;
 
     align-items:center;
 
-    gap:16px;
+    gap:18px;
 
-    padding:20px;
+    min-height:86px;
+
+    padding:18px 22px;
 
     text-align:left;
 
     text-decoration:none;
 
-    background:#081726;
+    background:#071522;
 
     border:1px solid
-        rgba(255,255,255,.07);
+        rgba(255,255,255,.10);
 
     transition:
         transform .3s ease,
-        border-color .3s ease,
-        background .3s ease;
+        background .3s ease,
+        border-color .3s ease;
+
 }
 
 
@@ -110,19 +215,20 @@
 
     transform:translateY(-6px);
 
-    background:#0c1e2e;
+    background:#0b1d2d;
 
     border-color:
-        rgba(255,120,0,.45);
+        rgba(255,255,255,.30);
+
 }
 
 
-/* ICONOS */
+/* ICONO */
 
 .social-icon{
 
-    width:48px;
-    height:48px;
+    width:55px;
+    height:55px;
 
     flex-shrink:0;
 
@@ -131,40 +237,109 @@
     align-items:center;
     justify-content:center;
 
-    border-radius:12px;
+    border-radius:14px;
 
-    background:
-        rgba(255,120,0,.12);
-
-    color:var(--orange);
-
-    font-size:22px;
-
-    font-weight:1000;
-}
-
-
-.social-card strong{
-
-    display:block;
+    background:#101f2c;
 
     color:#fff;
 
-    font-size:14px;
-
-    font-weight:1000;
 }
 
 
-.social-card span{
+.social-icon i{
+
+    font-size:27px;
+
+}
+
+
+/* COLORES DE ICONOS */
+
+.instagram-icon{
+
+    color:#E1306C;
+
+}
+
+.tiktok-icon{
+
+    color:#fff;
+
+}
+
+.youtube-icon{
+
+    color:#FF0000;
+
+}
+
+.email-icon{
+
+    color:#ff8a24;
+
+}
+
+
+/* TEXTO */
+
+.social-text{
+
+    min-width:0;
+
+}
+
+
+.social-text strong{
 
     display:block;
 
-    margin-top:4px;
+    margin-bottom:5px;
 
-    color:#788795;
+    color:#fff;
 
-    font-size:11px;
+    font-size:17px;
+
+    font-weight:1000;
+
+}
+
+
+.social-text span{
+
+    display:block;
+
+    color:#aab6c1;
+
+    font-size:13px;
+
+    line-height:1.4;
+
+}
+
+
+/* FLECHA */
+
+.social-arrow{
+
+    margin-left:auto;
+
+    color:#6d7d8a;
+
+    font-size:13px;
+
+    transition:
+        transform .3s ease,
+        color .3s ease;
+
+}
+
+
+.social-card:hover .social-arrow{
+
+    color:var(--orange);
+
+    transform:translate(3px,-3px);
+
 }
 
 
@@ -172,20 +347,43 @@
 
 @media(max-width:650px){
 
+    .cta-content h2{
+
+        font-size:46px;
+
+        letter-spacing:-1px;
+
+    }
+
+
+    .cta-content p{
+
+        font-size:15px;
+
+    }
+
+
     .social-grid{
 
         grid-template-columns:1fr;
 
     }
 
-    .cta-content h2{
 
-        font-size:44px;
+    .social-card{
+
+        min-height:78px;
+
+    }
+
+
+    .social-text strong{
+
+        font-size:16px;
 
     }
 
 }
-
    /* =====================================================
    NUESTRO FÚTBOL - IMÁGENES
 ===================================================== */
@@ -3979,12 +4177,14 @@ id="contacto">
         </p>
 
 
-        <!-- BOTÓN PRINCIPAL -->
+        <!-- WHATSAPP PRINCIPAL -->
 
         <a
             href="https://wa.me/573019072327"
             target="_blank"
             class="btn cta-main">
+
+            <i class="fa-brands fa-whatsapp"></i>
 
             HABLAR POR WHATSAPP
 
@@ -4003,11 +4203,12 @@ id="contacto">
                 target="_blank"
                 class="social-card">
 
-                <div class="social-icon">
-                    ◎
+                <div class="social-icon instagram-icon">
+                    <i class="fa-brands fa-instagram"></i>
                 </div>
 
-                <div>
+                <div class="social-text">
+
                     <strong>
                         Instagram
                     </strong>
@@ -4015,7 +4216,10 @@ id="contacto">
                     <span>
                         @calidosasfutbol11fc
                     </span>
+
                 </div>
+
+                <i class="fa-solid fa-arrow-up-right-from-square social-arrow"></i>
 
             </a>
 
@@ -4027,11 +4231,12 @@ id="contacto">
                 target="_blank"
                 class="social-card">
 
-                <div class="social-icon">
-                    ♪
+                <div class="social-icon tiktok-icon">
+                    <i class="fa-brands fa-tiktok"></i>
                 </div>
 
-                <div>
+                <div class="social-text">
+
                     <strong>
                         TikTok
                     </strong>
@@ -4039,7 +4244,10 @@ id="contacto">
                     <span>
                         @calidosas.futbol
                     </span>
+
                 </div>
+
+                <i class="fa-solid fa-arrow-up-right-from-square social-arrow"></i>
 
             </a>
 
@@ -4051,11 +4259,12 @@ id="contacto">
                 target="_blank"
                 class="social-card">
 
-                <div class="social-icon">
-                    ▶
+                <div class="social-icon youtube-icon">
+                    <i class="fa-brands fa-youtube"></i>
                 </div>
 
-                <div>
+                <div class="social-text">
+
                     <strong>
                         YouTube
                     </strong>
@@ -4063,7 +4272,10 @@ id="contacto">
                     <span>
                         Calidosas FC
                     </span>
+
                 </div>
+
+                <i class="fa-solid fa-arrow-up-right-from-square social-arrow"></i>
 
             </a>
 
@@ -4074,11 +4286,12 @@ id="contacto">
                 href="mailto:calidosos.f11@gmail.com"
                 class="social-card">
 
-                <div class="social-icon">
-                    @
+                <div class="social-icon email-icon">
+                    <i class="fa-solid fa-envelope"></i>
                 </div>
 
-                <div>
+                <div class="social-text">
+
                     <strong>
                         Email
                     </strong>
@@ -4086,7 +4299,10 @@ id="contacto">
                     <span>
                         calidosos.f11@gmail.com
                     </span>
+
                 </div>
+
+                <i class="fa-solid fa-arrow-right social-arrow"></i>
 
             </a>
 
